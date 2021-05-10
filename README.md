@@ -1,1 +1,3 @@
-# chessboard-detector
+roslaunch chess_detector camera.launch
+
+rosrun chess_detector aruco_detector.py
