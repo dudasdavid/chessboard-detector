@@ -481,50 +481,50 @@
       <wall_time>1620661842 929234300</wall_time>
       <iterations>27447</iterations>
       <model name='bishop_black'>
-        <pose frame=''>0.056 0.2 1.06 0 -0 0</pose>
+        <pose frame=''>0.056 0.19 1.125 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>0.056 0.2 1.06 0 -0 0</pose>
+          <pose frame=''>0.056 0.19 1.125 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 -980 0 -0 0</acceleration>
           <wrench>0 0 -9.8 0 -0 0</wrench>
         </link>
       </model>
       <model name='bishop_black_clone'>
-        <pose frame=''>-0.056 0.2 1.06 0 -0 0</pose>
+        <pose frame=''>-0.056 0.19 1.125 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>-0.056 0.2 1.06 0 -0 0</pose>
+          <pose frame=''>-0.056 0.19 1.125 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 -980 0 -0 0</acceleration>
           <wrench>0 0 -9.8 0 -0 0</wrench>
         </link>
       </model>
       <model name='bishop_white'>
-        <pose frame=''>0.056 0.463 1.06 0 -0 0</pose>
+        <pose frame=''>0.056 0.453 1.125 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>0.056 0.463 1.06 0 -0 0</pose>
+          <pose frame=''>0.056 0.453 1.125 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 -980 0 -0 0</acceleration>
           <wrench>0 0 -9.8 0 -0 0</wrench>
         </link>
       </model>
       <model name='bishop_white_clone'>
-        <pose frame=''>-0.056 0.463 1.06 0 -0 0</pose>
+        <pose frame=''>-0.056 0.453 1.125 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>-0.056 0.463 1.06 0 -0 0</pose>
+          <pose frame=''>-0.056 0.453 1.125 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 -980 0 -0 0</acceleration>
           <wrench>0 0 -9.8 0 -0 0</wrench>
         </link>
       </model>
       <model name='chessboard'>
-        <pose frame=''>0 0.33 1.05 0 -0 1.5708</pose>
+        <pose frame=''>0 0.32 1.115 0 -0 1.5708</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>0 0.33 1.05 0 -0 1.5708</pose>
+          <pose frame=''>0 0.32 1.115 0 -0 1.5708</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
@@ -541,280 +541,280 @@
         </link>
       </model>
       <model name='king_black'>
-        <pose frame=''>-0.019 0.2 1.06 0 -0 0</pose>
+        <pose frame=''>-0.019 0.19 1.125 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>-0.019 0.2 1.06 0 -0 0</pose>
+          <pose frame=''>-0.019 0.19 1.125 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 -980 0 -0 0</acceleration>
           <wrench>0 0 -9.8 0 -0 0</wrench>
         </link>
       </model>
       <model name='king_white'>
-        <pose frame=''>-0.019 0.463 1.06 0 -0 0</pose>
+        <pose frame=''>-0.019 0.453 1.125 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>-0.019 0.463 1.06 0 -0 0</pose>
+          <pose frame=''>-0.019 0.453 1.125 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 -980 0 -0 0</acceleration>
           <wrench>0 0 -9.8 0 -0 0</wrench>
         </link>
       </model>
       <model name='knight_black'>
-        <pose frame=''>0.094 0.2 1.06 0 -0 3.1415</pose>
+        <pose frame=''>0.094 0.19 1.125 0 -0 3.1415</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>0.094 0.2 1.06 0 -0 3.1415</pose>
+          <pose frame=''>0.094 0.19 1.125 0 -0 3.1415</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 -980 0 -0 0</acceleration>
           <wrench>0 0 -9.8 0 -0 0</wrench>
         </link>
       </model>
       <model name='knight_black_clone'>
-        <pose frame=''>-0.094 0.2 1.06 0 -0 3.1415</pose>
+        <pose frame=''>-0.094 0.19 1.125 0 -0 3.1415</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>-0.094 0.2 1.06 0 -0 3.1415</pose>
+          <pose frame=''>-0.094 0.19 1.125 0 -0 3.1415</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 -980 0 -0 0</acceleration>
           <wrench>0 0 -9.8 0 -0 0</wrench>
         </link>
       </model>
       <model name='knight_white'>
-        <pose frame=''>0.094 0.463 1.06 0 -0 0</pose>
+        <pose frame=''>0.094 0.453 1.125 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>0.094 0.463 1.06 0 -0 0</pose>
+          <pose frame=''>0.094 0.453 1.125 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 -980 0 -0 0</acceleration>
           <wrench>0 0 -9.8 0 -0 0</wrench>
         </link>
       </model>
       <model name='knight_white_clone'>
-        <pose frame=''>-0.094 0.463 1.06 0 -0 0</pose>
+        <pose frame=''>-0.094 0.453 1.125 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>-0.094 0.463 1.06 0 -0 0</pose>
+          <pose frame=''>-0.094 0.453 1.125 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 -980 0 -0 0</acceleration>
           <wrench>0 0 -9.8 0 -0 0</wrench>
         </link>
       </model>
       <model name='pawn_black'>
-        <pose frame=''>0.131 0.238 1.06 0 -0 0</pose>
+        <pose frame=''>0.131 0.228 1.125 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>0.131 0.238 1.06 0 -0 0</pose>
+          <pose frame=''>0.131 0.228 1.125 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 -980 0 -0 0</acceleration>
           <wrench>0 0 -9.8 0 -0 0</wrench>
         </link>
       </model>
       <model name='pawn_black_clone'>
-        <pose frame=''>0.094 0.238 1.06 0 -0 0</pose>
+        <pose frame=''>0.094 0.228 1.125 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>0.094 0.238 1.06 0 -0 0</pose>
+          <pose frame=''>0.094 0.228 1.125 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 -980 0 -0 0</acceleration>
           <wrench>0 0 -9.8 0 -0 0</wrench>
         </link>
       </model>
       <model name='pawn_black_clone_0'>
-        <pose frame=''>0.056 0.238 1.06 0 -0 0</pose>
+        <pose frame=''>0.056 0.228 1.125 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>0.056 0.238 1.06 0 -0 0</pose>
+          <pose frame=''>0.056 0.228 1.125 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 -980 0 -0 0</acceleration>
           <wrench>0 0 -9.8 0 -0 0</wrench>
         </link>
       </model>
       <model name='pawn_black_clone_1'>
-        <pose frame=''>0.019 0.238 1.06 0 -0 0</pose>
+        <pose frame=''>0.019 0.228 1.125 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>0.019 0.238 1.06 0 -0 0</pose>
+          <pose frame=''>0.019 0.228 1.125 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 -980 0 -0 0</acceleration>
           <wrench>0 0 -9.8 0 -0 0</wrench>
         </link>
       </model>
       <model name='pawn_black_clone_2'>
-        <pose frame=''>-0.019 0.238 1.06 0 -0 0</pose>
+        <pose frame=''>-0.019 0.228 1.125 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>-0.019 0.238 1.06 0 -0 0</pose>
+          <pose frame=''>-0.019 0.228 1.125 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 -980 0 -0 0</acceleration>
           <wrench>0 0 -9.8 0 -0 0</wrench>
         </link>
       </model>
       <model name='pawn_black_clone_3'>
-        <pose frame=''>-0.056 0.238 1.06 0 -0 0</pose>
+        <pose frame=''>-0.056 0.228 1.125 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>-0.056 0.238 1.06 0 -0 0</pose>
+          <pose frame=''>-0.056 0.228 1.125 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 -980 0 -0 0</acceleration>
           <wrench>0 0 -9.8 0 -0 0</wrench>
         </link>
       </model>
       <model name='pawn_black_clone_4'>
-        <pose frame=''>-0.094 0.238 1.06 0 -0 0</pose>
+        <pose frame=''>-0.094 0.228 1.125 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>-0.094 0.238 1.06 0 -0 0</pose>
+          <pose frame=''>-0.094 0.228 1.125 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 -980 0 -0 0</acceleration>
           <wrench>0 0 -9.8 0 -0 0</wrench>
         </link>
       </model>
       <model name='pawn_black_clone_5'>
-        <pose frame=''>-0.131 0.238 1.06 0 -0 0</pose>
+        <pose frame=''>-0.131 0.228 1.125 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>-0.131 0.238 1.06 0 -0 0</pose>
+          <pose frame=''>-0.131 0.228 1.125 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 -980 0 -0 0</acceleration>
           <wrench>0 0 -9.8 0 -0 0</wrench>
         </link>
       </model>
       <model name='pawn_white'>
-        <pose frame=''>0.131 0.425 1.05999 -4.1e-05 -0.000174 -3e-06</pose>
+        <pose frame=''>0.131 0.415 1.125 0 0 0</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>0.131 0.425 1.05999 -4.1e-05 -0.000174 -3e-06</pose>
+          <pose frame=''>0.131 0.415 1.125 0 0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 -980 0 -0 0</acceleration>
           <wrench>0 0 -9.8 0 -0 0</wrench>
         </link>
       </model>
       <model name='pawn_white_clone'>
-        <pose frame=''>0.094 0.425 1.05999 -4.2e-05 -0.000174 -4e-06</pose>
+        <pose frame=''>0.094 0.415 1.125 0 0 0</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>0.094 0.425 1.05999 -4.2e-05 -0.000174 -4e-06</pose>
+          <pose frame=''>0.094 0.415 1.125 0 0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 -980 0 -0 0</acceleration>
           <wrench>0 0 -9.8 0 -0 0</wrench>
         </link>
       </model>
       <model name='pawn_white_clone_0'>
-        <pose frame=''>0.056 0.425 1.06 -0.002492 -0.001538 -1.2e-05</pose>
+        <pose frame=''>0.056 0.415 1.125 0 0 0</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>0.056 0.425 1.06 -0.002492 -0.001538 -1.2e-05</pose>
+          <pose frame=''>0.056 0.415 1.125 0 0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 -980 0 -0 0</acceleration>
           <wrench>0 0 -9.8 0 -0 0</wrench>
         </link>
       </model>
       <model name='pawn_white_clone_1'>
-        <pose frame=''>0.019 0.425 1.06 1.2e-05 -2e-05 -1.4e-05</pose>
+        <pose frame=''>0.019 0.415 1.125 0 0 0</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>0.019 0.425 1.06 1.2e-05 -2e-05 -1.4e-05</pose>
+          <pose frame=''>0.019 0.415 1.125 0 0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 -980 0 -0 0</acceleration>
           <wrench>0 0 -9.8 0 -0 0</wrench>
         </link>
       </model>
       <model name='pawn_white_clone_2'>
-        <pose frame=''>-0.019 0.425 1.06 7e-05 1.8e-05 -3e-06</pose>
+        <pose frame=''>-0.019 0.415 1.125 0 0 0</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>-0.019 0.425 1.06 7e-05 1.8e-05 -3e-06</pose>
+          <pose frame=''>-0.019 0.415 1.125 0 0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 -980 0 -0 0</acceleration>
           <wrench>0 0 -9.8 0 -0 0</wrench>
         </link>
       </model>
       <model name='pawn_white_clone_3'>
-        <pose frame=''>-0.056 0.425 1.06 0.000868 0.000934 -1.6e-05</pose>
+        <pose frame=''>-0.056 0.415 1.125 0 0 0</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>-0.056 0.425 1.06 0.000868 0.000934 -1.6e-05</pose>
+          <pose frame=''>-0.056 0.415 1.125 0 0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 -980 0 -0 0</acceleration>
           <wrench>0 0 -9.8 0 -0 0</wrench>
         </link>
       </model>
       <model name='pawn_white_clone_4'>
-        <pose frame=''>-0.094 0.425 1.05999 -4.2e-05 -0.000174 -4e-06</pose>
+        <pose frame=''>-0.094 0.415 1.125 0 0 0</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>-0.094 0.425 1.05999 -4.2e-05 -0.000174 -4e-06</pose>
+          <pose frame=''>-0.094 0.415 1.125 0 0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 -980 0 -0 0</acceleration>
           <wrench>0 0 -9.8 0 -0 0</wrench>
         </link>
       </model>
       <model name='pawn_white_clone_5'>
-        <pose frame=''>-0.131 0.425 1.05999 -0.000119 -0.00016 -6e-06</pose>
+        <pose frame=''>-0.131 0.415 1.125 0 0 0</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>-0.131 0.425 1.05999 -0.000119 -0.00016 -6e-06</pose>
+          <pose frame=''>-0.131 0.415 1.125 0 0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 -980 0 -0 0</acceleration>
           <wrench>0 0 -9.8 0 -0 0</wrench>
         </link>
       </model>
       <model name='queen_black'>
-        <pose frame=''>0.019 0.2 1.06 0 -0 0</pose>
+        <pose frame=''>0.019 0.19 1.125 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>0.019 0.2 1.06 0 -0 0</pose>
+          <pose frame=''>0.019 0.19 1.125 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 -980 0 -0 0</acceleration>
           <wrench>0 0 -9.8 0 -0 0</wrench>
         </link>
       </model>
       <model name='queen_white'>
-        <pose frame=''>0.019 0.463 1.06 0 -0 0</pose>
+        <pose frame=''>0.019 0.453 1.125 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>0.019 0.463 1.06 0 -0 0</pose>
+          <pose frame=''>0.019 0.453 1.125 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 -980 0 -0 0</acceleration>
           <wrench>0 0 -9.8 0 -0 0</wrench>
         </link>
       </model>
       <model name='rook_black'>
-        <pose frame=''>0.131 0.2 1.06 0 -0 0</pose>
+        <pose frame=''>0.131 0.19 1.125 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>0.131 0.2 1.06 0 -0 0</pose>
+          <pose frame=''>0.131 0.19 1.125 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 -980 0 -0 0</acceleration>
           <wrench>0 0 -9.8 0 -0 0</wrench>
         </link>
       </model>
       <model name='rook_black_clone'>
-        <pose frame=''>-0.131 0.2 1.06 0 -0 0</pose>
+        <pose frame=''>-0.131 0.19 1.125 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>-0.131 0.2 1.06 0 -0 0</pose>
+          <pose frame=''>-0.131 0.19 1.125 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 -980 0 -0 0</acceleration>
           <wrench>0 0 -9.8 0 -0 0</wrench>
         </link>
       </model>
       <model name='rook_white'>
-        <pose frame=''>0.131 0.463 1.05994 0.000225 0.002147 0</pose>
+        <pose frame=''>0.131 0.453 1.125 0 0 0</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>0.131 0.463 1.05994 0.000225 0.002147 0</pose>
+          <pose frame=''>0.131 0.453 1.125 0 0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 -980 0 -0 0</acceleration>
           <wrench>0 0 -9.8 0 -0 0</wrench>
         </link>
       </model>
       <model name='rook_white_clone'>
-        <pose frame=''>-0.131 0.463 1.06 0 -0 0</pose>
+        <pose frame=''>-0.131 0.453 1.125 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>-0.131 0.463 1.06 0 -0 0</pose>
+          <pose frame=''>-0.131 0.453 1.125 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 -980 0 -0 0</acceleration>
           <wrench>0 0 -9.8 0 -0 0</wrench>
