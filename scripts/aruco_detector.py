@@ -116,14 +116,13 @@ class cvThread(threading.Thread):
         self.id4_location = None
 
         detection_frame = img.copy()
+        rejected_frame = img.copy()
         rows,cols = img.shape[:2]
-        blank = np.zeros((rows,cols,3), np.uint8)
 
         # detect ArUco markers in the input frame
         (corners, ids, rejected) = cv2.aruco.detectMarkers(img, arucoDict, parameters=arucoParams)
 
-        cv2.aruco.drawDetectedMarkers(detection_frame, rejected)
-        cv2.aruco.drawDetectedMarkers(blank, rejected)
+        cv2.aruco.drawDetectedMarkers(rejected_frame, rejected)
 
         # verify *at least* one ArUco marker was detected
         if len(corners) > 0:
@@ -143,17 +142,17 @@ class cvThread(threading.Thread):
                 topLeft = (int(topLeft[0]), int(topLeft[1]))
 
                 # draw the bounding box of the ArUCo detection
-                cv2.line(img, topLeft, topRight, (0, 255, 0), 2)
-                cv2.line(img, topRight, bottomRight, (0, 255, 0), 2)
-                cv2.line(img, bottomRight, bottomLeft, (0, 255, 0), 2)
-                cv2.line(img, bottomLeft, topLeft, (0, 255, 0), 2)
+                cv2.line(detection_frame, topLeft, topRight, (0, 255, 0), 2)
+                cv2.line(detection_frame, topRight, bottomRight, (0, 255, 0), 2)
+                cv2.line(detection_frame, bottomRight, bottomLeft, (0, 255, 0), 2)
+                cv2.line(detection_frame, bottomLeft, topLeft, (0, 255, 0), 2)
                 # compute and draw the center (x, y)-coordinates of the
                 # ArUco marker
                 cX = int((topLeft[0] + bottomRight[0]) / 2.0)
                 cY = int((topLeft[1] + bottomRight[1]) / 2.0)
-                cv2.circle(img, (cX, cY), 4, (0, 0, 255), -1)
+                cv2.circle(detection_frame, (cX, cY), 4, (0, 0, 255), -1)
                 # draw the ArUco marker ID on the frame
-                cv2.putText(img, str(markerID),
+                cv2.putText(detection_frame, str(markerID),
                     (topLeft[0], topLeft[1] - 15),
                     cv2.FONT_HERSHEY_SIMPLEX,
                     0.5, (0, 255, 0), 2)
@@ -181,7 +180,7 @@ class cvThread(threading.Thread):
             warped_depth = np.zeros((rows,cols,3), np.uint8)
 
         # Return processed frames
-        return detection_frame, blank, warped, warped_depth
+        return detection_frame, rejected_frame, warped, warped_depth
 
     def image_transform(self, img, points):
         """Crop original image using perspective warp."""
@@ -194,7 +193,7 @@ class cvThread(threading.Thread):
         return cv2.warpPerspective(img, mat, (board_length, board_length))
 
     # Add small images to the top row of the main image
-    def addSmallPictures(self, img, small_images, size=(100, 80)):
+    def addSmallPictures(self, img, small_images, size=(213, 160)):
         '''
         :param img: main image
         :param small_images: array of small images
