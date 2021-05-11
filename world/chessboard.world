@@ -852,6 +852,7 @@
       </camera>
     </gui>
     <model name='chessboard'>
+      <static>1</static>
       <link name='link_0'>
         <inertial>
           <mass>1</mass>
@@ -863,15 +864,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose frame=''>0 0 0 0 0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/chessboard.dae</uri>
@@ -884,85 +885,56 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0.005 0 0 0</pose>
           <geometry>
-            <mesh>
-              <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/chessboard.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
+            <!--mesh>
+        <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/chessboard.dae</uri>
+        <scale>1 1 1</scale>
+      </mesh-->
+            <box>
+              <size>0.368 0.368 0.01</size>
+            </box>
           </geometry>
           <surface>
             <friction>
               <ode>
                 <mu>1</mu>
                 <mu2>1</mu2>
-                <fdir1>0 0 0</fdir1>
-                <slip1>0</slip1>
-                <slip2>0</slip2>
               </ode>
-              <torsional>
-                <coefficient>1</coefficient>
-                <patch_radius>0</patch_radius>
-                <surface_radius>0</surface_radius>
-                <use_patch_radius>1</use_patch_radius>
-                <ode>
-                  <slip>0</slip>
-                </ode>
-              </torsional>
             </friction>
-            <bounce>
-              <restitution_coefficient>0</restitution_coefficient>
-              <threshold>1e+06</threshold>
-            </bounce>
             <contact>
-              <collide_without_contact>0</collide_without_contact>
-              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
-              <collide_bitmask>1</collide_bitmask>
               <ode>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
+                <kp>1e+07</kp>
                 <kd>1</kd>
-                <max_vel>0.01</max_vel>
-                <min_depth>0</min_depth>
+                <max_vel>0.001</max_vel>
+                <min_depth>0.1</min_depth>
               </ode>
-              <bullet>
-                <split_impulse>1</split_impulse>
-                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
-                <kd>1</kd>
-              </bullet>
             </contact>
           </surface>
         </collision>
       </link>
-      <static>1</static>
-      <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>0.20537 2.44805 0 0 -0 0</pose>
     </model>
     <model name='pawn_white'>
+      <static>0</static>
       <link name='link_0'>
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>1e-06</ixx>
+            <ixx>0.000001</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>1e-06</iyy>
+            <iyy>0.000001</iyy>
             <iyz>0</iyz>
-            <izz>5e-07</izz>
+            <izz>0.0000005</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
@@ -989,85 +961,57 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0.015 0 0 0</pose>
           <geometry>
-            <mesh>
-              <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
+            <!--mesh>
+      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
+      <scale>1 1 1</scale>
+      </mesh-->
+            <cylinder>
+              <radius>0.01</radius>
+              <length>0.03</length>
+            </cylinder>
           </geometry>
           <surface>
             <friction>
               <ode>
                 <mu>1</mu>
                 <mu2>1</mu2>
-                <fdir1>0 0 0</fdir1>
-                <slip1>0</slip1>
-                <slip2>0</slip2>
               </ode>
-              <torsional>
-                <coefficient>1</coefficient>
-                <patch_radius>0</patch_radius>
-                <surface_radius>0</surface_radius>
-                <use_patch_radius>1</use_patch_radius>
-                <ode>
-                  <slip>0</slip>
-                </ode>
-              </torsional>
             </friction>
-            <bounce>
-              <restitution_coefficient>0</restitution_coefficient>
-              <threshold>1e+06</threshold>
-            </bounce>
             <contact>
-              <collide_without_contact>0</collide_without_contact>
-              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
-              <collide_bitmask>1</collide_bitmask>
               <ode>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
+                <kp>1e+07</kp>
                 <kd>1</kd>
-                <max_vel>0.01</max_vel>
-                <min_depth>0</min_depth>
+                <max_vel>0.001</max_vel>
+                <min_depth>0.1</min_depth>
               </ode>
-              <bullet>
-                <split_impulse>1</split_impulse>
-                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
-                <kd>1</kd>
-              </bullet>
             </contact>
           </surface>
         </collision>
       </link>
-      <static>0</static>
-      <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>-0.025915 1.27103 0 0 -0 0</pose>
     </model>
     <model name='pawn_white_clone_0'>
+      <static>0</static>
       <link name='link_0'>
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>1e-06</ixx>
+            <ixx>0.000001</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>1e-06</iyy>
+            <iyy>0.000001</iyy>
             <iyz>0</iyz>
-            <izz>5e-07</izz>
+            <izz>0.0000005</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
@@ -1094,85 +1038,57 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0.015 0 0 0</pose>
           <geometry>
-            <mesh>
-              <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
+            <!--mesh>
+      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
+      <scale>1 1 1</scale>
+      </mesh-->
+            <cylinder>
+              <radius>0.01</radius>
+              <length>0.03</length>
+            </cylinder>
           </geometry>
           <surface>
             <friction>
               <ode>
                 <mu>1</mu>
                 <mu2>1</mu2>
-                <fdir1>0 0 0</fdir1>
-                <slip1>0</slip1>
-                <slip2>0</slip2>
               </ode>
-              <torsional>
-                <coefficient>1</coefficient>
-                <patch_radius>0</patch_radius>
-                <surface_radius>0</surface_radius>
-                <use_patch_radius>1</use_patch_radius>
-                <ode>
-                  <slip>0</slip>
-                </ode>
-              </torsional>
             </friction>
-            <bounce>
-              <restitution_coefficient>0</restitution_coefficient>
-              <threshold>1e+06</threshold>
-            </bounce>
             <contact>
-              <collide_without_contact>0</collide_without_contact>
-              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
-              <collide_bitmask>1</collide_bitmask>
               <ode>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
+                <kp>1e+07</kp>
                 <kd>1</kd>
-                <max_vel>0.01</max_vel>
-                <min_depth>0</min_depth>
+                <max_vel>0.001</max_vel>
+                <min_depth>0.1</min_depth>
               </ode>
-              <bullet>
-                <split_impulse>1</split_impulse>
-                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
-                <kd>1</kd>
-              </bullet>
             </contact>
           </surface>
         </collision>
       </link>
-      <static>0</static>
-      <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>0.054889 0.42805 1.06 0 -0 0</pose>
     </model>
     <model name='pawn_white_clone_1'>
+      <static>0</static>
       <link name='link_0'>
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>1e-06</ixx>
+            <ixx>0.000001</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>1e-06</iyy>
+            <iyy>0.000001</iyy>
             <iyz>0</iyz>
-            <izz>5e-07</izz>
+            <izz>0.0000005</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
@@ -1199,85 +1115,57 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0.015 0 0 0</pose>
           <geometry>
-            <mesh>
-              <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
+            <!--mesh>
+      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
+      <scale>1 1 1</scale>
+      </mesh-->
+            <cylinder>
+              <radius>0.01</radius>
+              <length>0.03</length>
+            </cylinder>
           </geometry>
           <surface>
             <friction>
               <ode>
                 <mu>1</mu>
                 <mu2>1</mu2>
-                <fdir1>0 0 0</fdir1>
-                <slip1>0</slip1>
-                <slip2>0</slip2>
               </ode>
-              <torsional>
-                <coefficient>1</coefficient>
-                <patch_radius>0</patch_radius>
-                <surface_radius>0</surface_radius>
-                <use_patch_radius>1</use_patch_radius>
-                <ode>
-                  <slip>0</slip>
-                </ode>
-              </torsional>
             </friction>
-            <bounce>
-              <restitution_coefficient>0</restitution_coefficient>
-              <threshold>1e+06</threshold>
-            </bounce>
             <contact>
-              <collide_without_contact>0</collide_without_contact>
-              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
-              <collide_bitmask>1</collide_bitmask>
               <ode>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
+                <kp>1e+07</kp>
                 <kd>1</kd>
-                <max_vel>0.01</max_vel>
-                <min_depth>0</min_depth>
+                <max_vel>0.001</max_vel>
+                <min_depth>0.1</min_depth>
               </ode>
-              <bullet>
-                <split_impulse>1</split_impulse>
-                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
-                <kd>1</kd>
-              </bullet>
             </contact>
           </surface>
         </collision>
       </link>
-      <static>0</static>
-      <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>0.017703 0.423912 1.06 0 -0 0</pose>
     </model>
     <model name='pawn_white_clone_2'>
+      <static>0</static>
       <link name='link_0'>
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>1e-06</ixx>
+            <ixx>0.000001</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>1e-06</iyy>
+            <iyy>0.000001</iyy>
             <iyz>0</iyz>
-            <izz>5e-07</izz>
+            <izz>0.0000005</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
@@ -1304,85 +1192,57 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0.015 0 0 0</pose>
           <geometry>
-            <mesh>
-              <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
+            <!--mesh>
+      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
+      <scale>1 1 1</scale>
+      </mesh-->
+            <cylinder>
+              <radius>0.01</radius>
+              <length>0.03</length>
+            </cylinder>
           </geometry>
           <surface>
             <friction>
               <ode>
                 <mu>1</mu>
                 <mu2>1</mu2>
-                <fdir1>0 0 0</fdir1>
-                <slip1>0</slip1>
-                <slip2>0</slip2>
               </ode>
-              <torsional>
-                <coefficient>1</coefficient>
-                <patch_radius>0</patch_radius>
-                <surface_radius>0</surface_radius>
-                <use_patch_radius>1</use_patch_radius>
-                <ode>
-                  <slip>0</slip>
-                </ode>
-              </torsional>
             </friction>
-            <bounce>
-              <restitution_coefficient>0</restitution_coefficient>
-              <threshold>1e+06</threshold>
-            </bounce>
             <contact>
-              <collide_without_contact>0</collide_without_contact>
-              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
-              <collide_bitmask>1</collide_bitmask>
               <ode>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
+                <kp>1e+07</kp>
                 <kd>1</kd>
-                <max_vel>0.01</max_vel>
-                <min_depth>0</min_depth>
+                <max_vel>0.001</max_vel>
+                <min_depth>0.1</min_depth>
               </ode>
-              <bullet>
-                <split_impulse>1</split_impulse>
-                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
-                <kd>1</kd>
-              </bullet>
             </contact>
           </surface>
         </collision>
       </link>
-      <static>0</static>
-      <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>-0.020514 0.423905 1.06 0 -0 0</pose>
     </model>
     <model name='pawn_white_clone_3'>
+      <static>0</static>
       <link name='link_0'>
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>1e-06</ixx>
+            <ixx>0.000001</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>1e-06</iyy>
+            <iyy>0.000001</iyy>
             <iyz>0</iyz>
-            <izz>5e-07</izz>
+            <izz>0.0000005</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
@@ -1409,85 +1269,57 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0.015 0 0 0</pose>
           <geometry>
-            <mesh>
-              <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
+            <!--mesh>
+      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
+      <scale>1 1 1</scale>
+      </mesh-->
+            <cylinder>
+              <radius>0.01</radius>
+              <length>0.03</length>
+            </cylinder>
           </geometry>
           <surface>
             <friction>
               <ode>
                 <mu>1</mu>
                 <mu2>1</mu2>
-                <fdir1>0 0 0</fdir1>
-                <slip1>0</slip1>
-                <slip2>0</slip2>
               </ode>
-              <torsional>
-                <coefficient>1</coefficient>
-                <patch_radius>0</patch_radius>
-                <surface_radius>0</surface_radius>
-                <use_patch_radius>1</use_patch_radius>
-                <ode>
-                  <slip>0</slip>
-                </ode>
-              </torsional>
             </friction>
-            <bounce>
-              <restitution_coefficient>0</restitution_coefficient>
-              <threshold>1e+06</threshold>
-            </bounce>
             <contact>
-              <collide_without_contact>0</collide_without_contact>
-              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
-              <collide_bitmask>1</collide_bitmask>
               <ode>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
+                <kp>1e+07</kp>
                 <kd>1</kd>
-                <max_vel>0.01</max_vel>
-                <min_depth>0</min_depth>
+                <max_vel>0.001</max_vel>
+                <min_depth>0.1</min_depth>
               </ode>
-              <bullet>
-                <split_impulse>1</split_impulse>
-                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
-                <kd>1</kd>
-              </bullet>
             </contact>
           </surface>
         </collision>
       </link>
-      <static>0</static>
-      <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>-0.058729 0.423899 1.06 0 -0 0</pose>
     </model>
     <model name='pawn_white_clone_5'>
+      <static>0</static>
       <link name='link_0'>
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>1e-06</ixx>
+            <ixx>0.000001</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>1e-06</iyy>
+            <iyy>0.000001</iyy>
             <iyz>0</iyz>
-            <izz>5e-07</izz>
+            <izz>0.0000005</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
@@ -1514,85 +1346,57 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0.015 0 0 0</pose>
           <geometry>
-            <mesh>
-              <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
+            <!--mesh>
+      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
+      <scale>1 1 1</scale>
+      </mesh-->
+            <cylinder>
+              <radius>0.01</radius>
+              <length>0.03</length>
+            </cylinder>
           </geometry>
           <surface>
             <friction>
               <ode>
                 <mu>1</mu>
                 <mu2>1</mu2>
-                <fdir1>0 0 0</fdir1>
-                <slip1>0</slip1>
-                <slip2>0</slip2>
               </ode>
-              <torsional>
-                <coefficient>1</coefficient>
-                <patch_radius>0</patch_radius>
-                <surface_radius>0</surface_radius>
-                <use_patch_radius>1</use_patch_radius>
-                <ode>
-                  <slip>0</slip>
-                </ode>
-              </torsional>
             </friction>
-            <bounce>
-              <restitution_coefficient>0</restitution_coefficient>
-              <threshold>1e+06</threshold>
-            </bounce>
             <contact>
-              <collide_without_contact>0</collide_without_contact>
-              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
-              <collide_bitmask>1</collide_bitmask>
               <ode>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
+                <kp>1e+07</kp>
                 <kd>1</kd>
-                <max_vel>0.01</max_vel>
-                <min_depth>0</min_depth>
+                <max_vel>0.001</max_vel>
+                <min_depth>0.1</min_depth>
               </ode>
-              <bullet>
-                <split_impulse>1</split_impulse>
-                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
-                <kd>1</kd>
-              </bullet>
             </contact>
           </surface>
         </collision>
       </link>
-      <static>0</static>
-      <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>-0.133091 0.424919 1.06 0 -0 0</pose>
     </model>
     <model name='rook_white'>
+      <static>0</static>
       <link name='link_0'>
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>1e-06</ixx>
+            <ixx>0.000001</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>1e-06</iyy>
+            <iyy>0.000001</iyy>
             <iyz>0</iyz>
-            <izz>5e-07</izz>
+            <izz>0.0000005</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/rook.dae</uri>
@@ -1619,85 +1423,57 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0.015 0 0 0</pose>
           <geometry>
-            <mesh>
-              <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/rook.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
+            <!--mesh>
+      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/rook.dae</uri>
+      <scale>1 1 1</scale>
+      </mesh-->
+            <cylinder>
+              <radius>0.01</radius>
+              <length>0.03</length>
+            </cylinder>
           </geometry>
           <surface>
             <friction>
               <ode>
                 <mu>1</mu>
                 <mu2>1</mu2>
-                <fdir1>0 0 0</fdir1>
-                <slip1>0</slip1>
-                <slip2>0</slip2>
               </ode>
-              <torsional>
-                <coefficient>1</coefficient>
-                <patch_radius>0</patch_radius>
-                <surface_radius>0</surface_radius>
-                <use_patch_radius>1</use_patch_radius>
-                <ode>
-                  <slip>0</slip>
-                </ode>
-              </torsional>
             </friction>
-            <bounce>
-              <restitution_coefficient>0</restitution_coefficient>
-              <threshold>1e+06</threshold>
-            </bounce>
             <contact>
-              <collide_without_contact>0</collide_without_contact>
-              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
-              <collide_bitmask>1</collide_bitmask>
               <ode>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
+                <kp>1e+07</kp>
                 <kd>1</kd>
-                <max_vel>0.01</max_vel>
-                <min_depth>0</min_depth>
+                <max_vel>0.001</max_vel>
+                <min_depth>0.1</min_depth>
               </ode>
-              <bullet>
-                <split_impulse>1</split_impulse>
-                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
-                <kd>1</kd>
-              </bullet>
             </contact>
           </surface>
         </collision>
       </link>
-      <static>0</static>
-      <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>-0.125294 1.39437 0 0 -0 0</pose>
     </model>
     <model name='rook_white_clone'>
+      <static>0</static>
       <link name='link_0'>
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>1e-06</ixx>
+            <ixx>0.000001</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>1e-06</iyy>
+            <iyy>0.000001</iyy>
             <iyz>0</iyz>
-            <izz>5e-07</izz>
+            <izz>0.0000005</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/rook.dae</uri>
@@ -1724,85 +1500,57 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0.015 0 0 0</pose>
           <geometry>
-            <mesh>
-              <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/rook.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
+            <!--mesh>
+      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/rook.dae</uri>
+      <scale>1 1 1</scale>
+      </mesh-->
+            <cylinder>
+              <radius>0.01</radius>
+              <length>0.03</length>
+            </cylinder>
           </geometry>
           <surface>
             <friction>
               <ode>
                 <mu>1</mu>
                 <mu2>1</mu2>
-                <fdir1>0 0 0</fdir1>
-                <slip1>0</slip1>
-                <slip2>0</slip2>
               </ode>
-              <torsional>
-                <coefficient>1</coefficient>
-                <patch_radius>0</patch_radius>
-                <surface_radius>0</surface_radius>
-                <use_patch_radius>1</use_patch_radius>
-                <ode>
-                  <slip>0</slip>
-                </ode>
-              </torsional>
             </friction>
-            <bounce>
-              <restitution_coefficient>0</restitution_coefficient>
-              <threshold>1e+06</threshold>
-            </bounce>
             <contact>
-              <collide_without_contact>0</collide_without_contact>
-              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
-              <collide_bitmask>1</collide_bitmask>
               <ode>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
+                <kp>1e+07</kp>
                 <kd>1</kd>
-                <max_vel>0.01</max_vel>
-                <min_depth>0</min_depth>
+                <max_vel>0.001</max_vel>
+                <min_depth>0.1</min_depth>
               </ode>
-              <bullet>
-                <split_impulse>1</split_impulse>
-                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
-                <kd>1</kd>
-              </bullet>
             </contact>
           </surface>
         </collision>
       </link>
-      <static>0</static>
-      <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>-0.135863 0.461504 1.06 0 -0 0</pose>
     </model>
     <model name='knight_white'>
+      <static>0</static>
       <link name='link_0'>
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>1e-06</ixx>
+            <ixx>0.000001</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>1e-06</iyy>
+            <iyy>0.000001</iyy>
             <iyz>0</iyz>
-            <izz>5e-07</izz>
+            <izz>0.0000005</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/knight.dae</uri>
@@ -1829,85 +1577,57 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0.015 0 0 0</pose>
           <geometry>
-            <mesh>
-              <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/knight.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
+            <!--mesh>
+      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/knight.dae</uri>
+      <scale>1 1 1</scale>
+      </mesh-->
+            <cylinder>
+              <radius>0.01</radius>
+              <length>0.03</length>
+            </cylinder>
           </geometry>
           <surface>
             <friction>
               <ode>
                 <mu>1</mu>
                 <mu2>1</mu2>
-                <fdir1>0 0 0</fdir1>
-                <slip1>0</slip1>
-                <slip2>0</slip2>
               </ode>
-              <torsional>
-                <coefficient>1</coefficient>
-                <patch_radius>0</patch_radius>
-                <surface_radius>0</surface_radius>
-                <use_patch_radius>1</use_patch_radius>
-                <ode>
-                  <slip>0</slip>
-                </ode>
-              </torsional>
             </friction>
-            <bounce>
-              <restitution_coefficient>0</restitution_coefficient>
-              <threshold>1e+06</threshold>
-            </bounce>
             <contact>
-              <collide_without_contact>0</collide_without_contact>
-              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
-              <collide_bitmask>1</collide_bitmask>
               <ode>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
+                <kp>1e+07</kp>
                 <kd>1</kd>
-                <max_vel>0.01</max_vel>
-                <min_depth>0</min_depth>
+                <max_vel>0.001</max_vel>
+                <min_depth>0.1</min_depth>
               </ode>
-              <bullet>
-                <split_impulse>1</split_impulse>
-                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
-                <kd>1</kd>
-              </bullet>
             </contact>
           </surface>
         </collision>
       </link>
-      <static>0</static>
-      <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>-0.273712 1.7081 0 0 -0 0</pose>
     </model>
     <model name='knight_white_clone'>
+      <static>0</static>
       <link name='link_0'>
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>1e-06</ixx>
+            <ixx>0.000001</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>1e-06</iyy>
+            <iyy>0.000001</iyy>
             <iyz>0</iyz>
-            <izz>5e-07</izz>
+            <izz>0.0000005</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/knight.dae</uri>
@@ -1934,85 +1654,57 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0.015 0 0 0</pose>
           <geometry>
-            <mesh>
-              <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/knight.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
+            <!--mesh>
+      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/knight.dae</uri>
+      <scale>1 1 1</scale>
+      </mesh-->
+            <cylinder>
+              <radius>0.01</radius>
+              <length>0.03</length>
+            </cylinder>
           </geometry>
           <surface>
             <friction>
               <ode>
                 <mu>1</mu>
                 <mu2>1</mu2>
-                <fdir1>0 0 0</fdir1>
-                <slip1>0</slip1>
-                <slip2>0</slip2>
               </ode>
-              <torsional>
-                <coefficient>1</coefficient>
-                <patch_radius>0</patch_radius>
-                <surface_radius>0</surface_radius>
-                <use_patch_radius>1</use_patch_radius>
-                <ode>
-                  <slip>0</slip>
-                </ode>
-              </torsional>
             </friction>
-            <bounce>
-              <restitution_coefficient>0</restitution_coefficient>
-              <threshold>1e+06</threshold>
-            </bounce>
             <contact>
-              <collide_without_contact>0</collide_without_contact>
-              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
-              <collide_bitmask>1</collide_bitmask>
               <ode>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
+                <kp>1e+07</kp>
                 <kd>1</kd>
-                <max_vel>0.01</max_vel>
-                <min_depth>0</min_depth>
+                <max_vel>0.001</max_vel>
+                <min_depth>0.1</min_depth>
               </ode>
-              <bullet>
-                <split_impulse>1</split_impulse>
-                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
-                <kd>1</kd>
-              </bullet>
             </contact>
           </surface>
         </collision>
       </link>
-      <static>0</static>
-      <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>-0.096475 0.461499 1.06 0 -0 0</pose>
     </model>
     <model name='bishop_white'>
+      <static>0</static>
       <link name='link_0'>
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>1e-06</ixx>
+            <ixx>0.000001</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>1e-06</iyy>
+            <iyy>0.000001</iyy>
             <iyz>0</iyz>
-            <izz>5e-07</izz>
+            <izz>0.0000005</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/bishop.dae</uri>
@@ -2039,85 +1731,60 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0.015 0 0 0</pose>
           <geometry>
-            <mesh>
-              <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/bishop.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
+            <!--mesh>
+      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/bishop.dae</uri>
+      <scale>1 1 1</scale>
+      </mesh-->
+            <cylinder>
+              <radius>0.01</radius>
+              <length>0.03</length>
+            </cylinder>
           </geometry>
           <surface>
             <friction>
               <ode>
                 <mu>1</mu>
                 <mu2>1</mu2>
-                <fdir1>0 0 0</fdir1>
-                <slip1>0</slip1>
-                <slip2>0</slip2>
               </ode>
-              <torsional>
-                <coefficient>1</coefficient>
-                <patch_radius>0</patch_radius>
-                <surface_radius>0</surface_radius>
-                <use_patch_radius>1</use_patch_radius>
-                <ode>
-                  <slip>0</slip>
-                </ode>
-              </torsional>
             </friction>
-            <bounce>
-              <restitution_coefficient>0</restitution_coefficient>
-              <threshold>1e+06</threshold>
-            </bounce>
             <contact>
               <collide_without_contact>0</collide_without_contact>
               <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
               <collide_bitmask>1</collide_bitmask>
               <ode>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
+                <kp>1e+07</kp>
                 <kd>1</kd>
-                <max_vel>0.01</max_vel>
-                <min_depth>0</min_depth>
+                <max_vel>0.001</max_vel>
+                <min_depth>0.1</min_depth>
               </ode>
-              <bullet>
-                <split_impulse>1</split_impulse>
-                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
-                <kd>1</kd>
-              </bullet>
             </contact>
           </surface>
         </collision>
       </link>
-      <static>0</static>
-      <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>-0.328238 1.78794 0 0 -0 0</pose>
     </model>
     <model name='bishop_white_clone'>
+      <static>0</static>
       <link name='link_0'>
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>1e-06</ixx>
+            <ixx>0.000001</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>1e-06</iyy>
+            <iyy>0.000001</iyy>
             <iyz>0</iyz>
-            <izz>5e-07</izz>
+            <izz>0.0000005</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/bishop.dae</uri>
@@ -2144,85 +1811,60 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0.015 0 0 0</pose>
           <geometry>
-            <mesh>
-              <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/bishop.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
+            <!--mesh>
+      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/bishop.dae</uri>
+      <scale>1 1 1</scale>
+      </mesh-->
+            <cylinder>
+              <radius>0.01</radius>
+              <length>0.03</length>
+            </cylinder>
           </geometry>
           <surface>
             <friction>
               <ode>
                 <mu>1</mu>
                 <mu2>1</mu2>
-                <fdir1>0 0 0</fdir1>
-                <slip1>0</slip1>
-                <slip2>0</slip2>
               </ode>
-              <torsional>
-                <coefficient>1</coefficient>
-                <patch_radius>0</patch_radius>
-                <surface_radius>0</surface_radius>
-                <use_patch_radius>1</use_patch_radius>
-                <ode>
-                  <slip>0</slip>
-                </ode>
-              </torsional>
             </friction>
-            <bounce>
-              <restitution_coefficient>0</restitution_coefficient>
-              <threshold>1e+06</threshold>
-            </bounce>
             <contact>
               <collide_without_contact>0</collide_without_contact>
               <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
               <collide_bitmask>1</collide_bitmask>
               <ode>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
+                <kp>1e+07</kp>
                 <kd>1</kd>
-                <max_vel>0.01</max_vel>
-                <min_depth>0</min_depth>
+                <max_vel>0.001</max_vel>
+                <min_depth>0.1</min_depth>
               </ode>
-              <bullet>
-                <split_impulse>1</split_impulse>
-                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
-                <kd>1</kd>
-              </bullet>
             </contact>
           </surface>
         </collision>
       </link>
-      <static>0</static>
-      <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>-0.057734 0.46386 1.06 0 -0 0</pose>
     </model>
     <model name='queen_white'>
+      <static>0</static>
       <link name='link_0'>
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>1e-06</ixx>
+            <ixx>0.000001</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>1e-06</iyy>
+            <iyy>0.000001</iyy>
             <iyz>0</iyz>
-            <izz>5e-07</izz>
+            <izz>0.0000005</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/queen.dae</uri>
@@ -2249,88 +1891,60 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0.015 0 0 0</pose>
           <geometry>
-            <mesh>
-              <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/queen.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
+            <!--mesh>
+      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/queen.dae</uri>
+      <scale>1 1 1</scale>
+      </mesh-->
+            <cylinder>
+              <radius>0.01</radius>
+              <length>0.03</length>
+            </cylinder>
           </geometry>
           <surface>
             <friction>
               <ode>
                 <mu>1</mu>
                 <mu2>1</mu2>
-                <fdir1>0 0 0</fdir1>
-                <slip1>0</slip1>
-                <slip2>0</slip2>
               </ode>
-              <torsional>
-                <coefficient>1</coefficient>
-                <patch_radius>0</patch_radius>
-                <surface_radius>0</surface_radius>
-                <use_patch_radius>1</use_patch_radius>
-                <ode>
-                  <slip>0</slip>
-                </ode>
-              </torsional>
             </friction>
-            <bounce>
-              <restitution_coefficient>0</restitution_coefficient>
-              <threshold>1e+06</threshold>
-            </bounce>
             <contact>
-              <collide_without_contact>0</collide_without_contact>
-              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
-              <collide_bitmask>1</collide_bitmask>
               <ode>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
+                <kp>1e+07</kp>
                 <kd>1</kd>
-                <max_vel>0.01</max_vel>
-                <min_depth>0</min_depth>
+                <max_vel>0.001</max_vel>
+                <min_depth>0.1</min_depth>
               </ode>
-              <bullet>
-                <split_impulse>1</split_impulse>
-                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
-                <kd>1</kd>
-              </bullet>
             </contact>
           </surface>
         </collision>
       </link>
-      <static>0</static>
-      <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>-0.438217 1.76551 0 0 -0 0</pose>
     </model>
     <model name='king_white'>
+      <static>0</static>
       <link name='link_0'>
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>1e-06</ixx>
+            <ixx>0.000001</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>1e-06</iyy>
+            <iyy>0.000001</iyy>
             <iyz>0</iyz>
-            <izz>5e-07</izz>
+            <izz>0.0000005</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/king.dae</uri>
+              <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/knight.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -2354,85 +1968,57 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0.015 0 0 0</pose>
           <geometry>
-            <mesh>
-              <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/king.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
+            <!--mesh>
+      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/knight.dae</uri>
+      <scale>1 1 1</scale>
+      </mesh-->
+            <cylinder>
+              <radius>0.01</radius>
+              <length>0.03</length>
+            </cylinder>
           </geometry>
           <surface>
             <friction>
               <ode>
                 <mu>1</mu>
                 <mu2>1</mu2>
-                <fdir1>0 0 0</fdir1>
-                <slip1>0</slip1>
-                <slip2>0</slip2>
               </ode>
-              <torsional>
-                <coefficient>1</coefficient>
-                <patch_radius>0</patch_radius>
-                <surface_radius>0</surface_radius>
-                <use_patch_radius>1</use_patch_radius>
-                <ode>
-                  <slip>0</slip>
-                </ode>
-              </torsional>
             </friction>
-            <bounce>
-              <restitution_coefficient>0</restitution_coefficient>
-              <threshold>1e+06</threshold>
-            </bounce>
             <contact>
-              <collide_without_contact>0</collide_without_contact>
-              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
-              <collide_bitmask>1</collide_bitmask>
               <ode>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
+                <kp>1e+07</kp>
                 <kd>1</kd>
-                <max_vel>0.01</max_vel>
-                <min_depth>0</min_depth>
+                <max_vel>0.001</max_vel>
+                <min_depth>0.1</min_depth>
               </ode>
-              <bullet>
-                <split_impulse>1</split_impulse>
-                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
-                <kd>1</kd>
-              </bullet>
             </contact>
           </surface>
         </collision>
       </link>
-      <static>0</static>
-      <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>-0.328462 1.73195 0 0 -0 0</pose>
     </model>
     <model name='pawn_black'>
+      <static>0</static>
       <link name='link_0'>
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>1e-06</ixx>
+            <ixx>0.000001</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>1e-06</iyy>
+            <iyy>0.000001</iyy>
             <iyz>0</iyz>
-            <izz>5e-07</izz>
+            <izz>0.0000005</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
@@ -2459,85 +2045,57 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0.015 0 0 0</pose>
           <geometry>
-            <mesh>
-              <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
+            <!--mesh>
+      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
+      <scale>1 1 1</scale>
+      </mesh-->
+            <cylinder>
+              <radius>0.01</radius>
+              <length>0.03</length>
+            </cylinder>
           </geometry>
           <surface>
             <friction>
               <ode>
                 <mu>1</mu>
                 <mu2>1</mu2>
-                <fdir1>0 0 0</fdir1>
-                <slip1>0</slip1>
-                <slip2>0</slip2>
               </ode>
-              <torsional>
-                <coefficient>1</coefficient>
-                <patch_radius>0</patch_radius>
-                <surface_radius>0</surface_radius>
-                <use_patch_radius>1</use_patch_radius>
-                <ode>
-                  <slip>0</slip>
-                </ode>
-              </torsional>
             </friction>
-            <bounce>
-              <restitution_coefficient>0</restitution_coefficient>
-              <threshold>1e+06</threshold>
-            </bounce>
             <contact>
-              <collide_without_contact>0</collide_without_contact>
-              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
-              <collide_bitmask>1</collide_bitmask>
               <ode>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
+                <kp>1e+07</kp>
                 <kd>1</kd>
-                <max_vel>0.01</max_vel>
-                <min_depth>0</min_depth>
+                <max_vel>0.001</max_vel>
+                <min_depth>0.1</min_depth>
               </ode>
-              <bullet>
-                <split_impulse>1</split_impulse>
-                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
-                <kd>1</kd>
-              </bullet>
             </contact>
           </surface>
         </collision>
       </link>
-      <static>0</static>
-      <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>-0.222746 1.72329 0 0 -0 0</pose>
     </model>
     <model name='pawn_black_clone'>
+      <static>0</static>
       <link name='link_0'>
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>1e-06</ixx>
+            <ixx>0.000001</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>1e-06</iyy>
+            <iyy>0.000001</iyy>
             <iyz>0</iyz>
-            <izz>5e-07</izz>
+            <izz>0.0000005</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
@@ -2564,85 +2122,57 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0.015 0 0 0</pose>
           <geometry>
-            <mesh>
-              <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
+            <!--mesh>
+      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
+      <scale>1 1 1</scale>
+      </mesh-->
+            <cylinder>
+              <radius>0.01</radius>
+              <length>0.03</length>
+            </cylinder>
           </geometry>
           <surface>
             <friction>
               <ode>
                 <mu>1</mu>
                 <mu2>1</mu2>
-                <fdir1>0 0 0</fdir1>
-                <slip1>0</slip1>
-                <slip2>0</slip2>
               </ode>
-              <torsional>
-                <coefficient>1</coefficient>
-                <patch_radius>0</patch_radius>
-                <surface_radius>0</surface_radius>
-                <use_patch_radius>1</use_patch_radius>
-                <ode>
-                  <slip>0</slip>
-                </ode>
-              </torsional>
             </friction>
-            <bounce>
-              <restitution_coefficient>0</restitution_coefficient>
-              <threshold>1e+06</threshold>
-            </bounce>
             <contact>
-              <collide_without_contact>0</collide_without_contact>
-              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
-              <collide_bitmask>1</collide_bitmask>
               <ode>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
+                <kp>1e+07</kp>
                 <kd>1</kd>
-                <max_vel>0.01</max_vel>
-                <min_depth>0</min_depth>
+                <max_vel>0.001</max_vel>
+                <min_depth>0.1</min_depth>
               </ode>
-              <bullet>
-                <split_impulse>1</split_impulse>
-                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
-                <kd>1</kd>
-              </bullet>
             </contact>
           </surface>
         </collision>
       </link>
-      <static>0</static>
-      <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>0.094837 0.23719 1.06 0 -0 0</pose>
     </model>
     <model name='pawn_black_clone_0'>
+      <static>0</static>
       <link name='link_0'>
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>1e-06</ixx>
+            <ixx>0.000001</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>1e-06</iyy>
+            <iyy>0.000001</iyy>
             <iyz>0</iyz>
-            <izz>5e-07</izz>
+            <izz>0.0000005</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
@@ -2669,85 +2199,57 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0.015 0 0 0</pose>
           <geometry>
-            <mesh>
-              <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
+            <!--mesh>
+      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
+      <scale>1 1 1</scale>
+      </mesh-->
+            <cylinder>
+              <radius>0.01</radius>
+              <length>0.03</length>
+            </cylinder>
           </geometry>
           <surface>
             <friction>
               <ode>
                 <mu>1</mu>
                 <mu2>1</mu2>
-                <fdir1>0 0 0</fdir1>
-                <slip1>0</slip1>
-                <slip2>0</slip2>
               </ode>
-              <torsional>
-                <coefficient>1</coefficient>
-                <patch_radius>0</patch_radius>
-                <surface_radius>0</surface_radius>
-                <use_patch_radius>1</use_patch_radius>
-                <ode>
-                  <slip>0</slip>
-                </ode>
-              </torsional>
             </friction>
-            <bounce>
-              <restitution_coefficient>0</restitution_coefficient>
-              <threshold>1e+06</threshold>
-            </bounce>
             <contact>
-              <collide_without_contact>0</collide_without_contact>
-              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
-              <collide_bitmask>1</collide_bitmask>
               <ode>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
+                <kp>1e+07</kp>
                 <kd>1</kd>
-                <max_vel>0.01</max_vel>
-                <min_depth>0</min_depth>
+                <max_vel>0.001</max_vel>
+                <min_depth>0.1</min_depth>
               </ode>
-              <bullet>
-                <split_impulse>1</split_impulse>
-                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
-                <kd>1</kd>
-              </bullet>
             </contact>
           </surface>
         </collision>
       </link>
-      <static>0</static>
-      <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>0.057504 0.23734 1.06 0 -0 0</pose>
     </model>
     <model name='pawn_black_clone_1'>
+      <static>0</static>
       <link name='link_0'>
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>1e-06</ixx>
+            <ixx>0.000001</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>1e-06</iyy>
+            <iyy>0.000001</iyy>
             <iyz>0</iyz>
-            <izz>5e-07</izz>
+            <izz>0.0000005</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
@@ -2774,85 +2276,57 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0.015 0 0 0</pose>
           <geometry>
-            <mesh>
-              <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
+            <!--mesh>
+      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
+      <scale>1 1 1</scale>
+      </mesh-->
+            <cylinder>
+              <radius>0.01</radius>
+              <length>0.03</length>
+            </cylinder>
           </geometry>
           <surface>
             <friction>
               <ode>
                 <mu>1</mu>
                 <mu2>1</mu2>
-                <fdir1>0 0 0</fdir1>
-                <slip1>0</slip1>
-                <slip2>0</slip2>
               </ode>
-              <torsional>
-                <coefficient>1</coefficient>
-                <patch_radius>0</patch_radius>
-                <surface_radius>0</surface_radius>
-                <use_patch_radius>1</use_patch_radius>
-                <ode>
-                  <slip>0</slip>
-                </ode>
-              </torsional>
             </friction>
-            <bounce>
-              <restitution_coefficient>0</restitution_coefficient>
-              <threshold>1e+06</threshold>
-            </bounce>
             <contact>
-              <collide_without_contact>0</collide_without_contact>
-              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
-              <collide_bitmask>1</collide_bitmask>
               <ode>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
+                <kp>1e+07</kp>
                 <kd>1</kd>
-                <max_vel>0.01</max_vel>
-                <min_depth>0</min_depth>
+                <max_vel>0.001</max_vel>
+                <min_depth>0.1</min_depth>
               </ode>
-              <bullet>
-                <split_impulse>1</split_impulse>
-                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
-                <kd>1</kd>
-              </bullet>
             </contact>
           </surface>
         </collision>
       </link>
-      <static>0</static>
-      <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>0.018097 0.237499 1.06 0 -0 0</pose>
     </model>
     <model name='pawn_black_clone_2'>
+      <static>0</static>
       <link name='link_0'>
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>1e-06</ixx>
+            <ixx>0.000001</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>1e-06</iyy>
+            <iyy>0.000001</iyy>
             <iyz>0</iyz>
-            <izz>5e-07</izz>
+            <izz>0.0000005</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
@@ -2879,85 +2353,57 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0.015 0 0 0</pose>
           <geometry>
-            <mesh>
-              <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
+            <!--mesh>
+      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
+      <scale>1 1 1</scale>
+      </mesh-->
+            <cylinder>
+              <radius>0.01</radius>
+              <length>0.03</length>
+            </cylinder>
           </geometry>
           <surface>
             <friction>
               <ode>
                 <mu>1</mu>
                 <mu2>1</mu2>
-                <fdir1>0 0 0</fdir1>
-                <slip1>0</slip1>
-                <slip2>0</slip2>
               </ode>
-              <torsional>
-                <coefficient>1</coefficient>
-                <patch_radius>0</patch_radius>
-                <surface_radius>0</surface_radius>
-                <use_patch_radius>1</use_patch_radius>
-                <ode>
-                  <slip>0</slip>
-                </ode>
-              </torsional>
             </friction>
-            <bounce>
-              <restitution_coefficient>0</restitution_coefficient>
-              <threshold>1e+06</threshold>
-            </bounce>
             <contact>
-              <collide_without_contact>0</collide_without_contact>
-              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
-              <collide_bitmask>1</collide_bitmask>
               <ode>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
+                <kp>1e+07</kp>
                 <kd>1</kd>
-                <max_vel>0.01</max_vel>
-                <min_depth>0</min_depth>
+                <max_vel>0.001</max_vel>
+                <min_depth>0.1</min_depth>
               </ode>
-              <bullet>
-                <split_impulse>1</split_impulse>
-                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
-                <kd>1</kd>
-              </bullet>
             </contact>
           </surface>
         </collision>
       </link>
-      <static>0</static>
-      <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>-0.01716 0.23764 1.06 0 -0 0</pose>
     </model>
     <model name='pawn_black_clone_3'>
+      <static>0</static>
       <link name='link_0'>
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>1e-06</ixx>
+            <ixx>0.000001</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>1e-06</iyy>
+            <iyy>0.000001</iyy>
             <iyz>0</iyz>
-            <izz>5e-07</izz>
+            <izz>0.0000005</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
@@ -2984,85 +2430,57 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0.015 0 0 0</pose>
           <geometry>
-            <mesh>
-              <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
+            <!--mesh>
+      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
+      <scale>1 1 1</scale>
+      </mesh-->
+            <cylinder>
+              <radius>0.01</radius>
+              <length>0.03</length>
+            </cylinder>
           </geometry>
           <surface>
             <friction>
               <ode>
                 <mu>1</mu>
                 <mu2>1</mu2>
-                <fdir1>0 0 0</fdir1>
-                <slip1>0</slip1>
-                <slip2>0</slip2>
               </ode>
-              <torsional>
-                <coefficient>1</coefficient>
-                <patch_radius>0</patch_radius>
-                <surface_radius>0</surface_radius>
-                <use_patch_radius>1</use_patch_radius>
-                <ode>
-                  <slip>0</slip>
-                </ode>
-              </torsional>
             </friction>
-            <bounce>
-              <restitution_coefficient>0</restitution_coefficient>
-              <threshold>1e+06</threshold>
-            </bounce>
             <contact>
-              <collide_without_contact>0</collide_without_contact>
-              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
-              <collide_bitmask>1</collide_bitmask>
               <ode>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
+                <kp>1e+07</kp>
                 <kd>1</kd>
-                <max_vel>0.01</max_vel>
-                <min_depth>0</min_depth>
+                <max_vel>0.001</max_vel>
+                <min_depth>0.1</min_depth>
               </ode>
-              <bullet>
-                <split_impulse>1</split_impulse>
-                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
-                <kd>1</kd>
-              </bullet>
             </contact>
           </surface>
         </collision>
       </link>
-      <static>0</static>
-      <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>-0.056581 0.233651 1.06 0 -0 0</pose>
     </model>
     <model name='pawn_black_clone_4'>
+      <static>0</static>
       <link name='link_0'>
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>1e-06</ixx>
+            <ixx>0.000001</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>1e-06</iyy>
+            <iyy>0.000001</iyy>
             <iyz>0</iyz>
-            <izz>5e-07</izz>
+            <izz>0.0000005</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
@@ -3089,85 +2507,57 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0.015 0 0 0</pose>
           <geometry>
-            <mesh>
-              <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
+            <!--mesh>
+      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
+      <scale>1 1 1</scale>
+      </mesh-->
+            <cylinder>
+              <radius>0.01</radius>
+              <length>0.03</length>
+            </cylinder>
           </geometry>
           <surface>
             <friction>
               <ode>
                 <mu>1</mu>
                 <mu2>1</mu2>
-                <fdir1>0 0 0</fdir1>
-                <slip1>0</slip1>
-                <slip2>0</slip2>
               </ode>
-              <torsional>
-                <coefficient>1</coefficient>
-                <patch_radius>0</patch_radius>
-                <surface_radius>0</surface_radius>
-                <use_patch_radius>1</use_patch_radius>
-                <ode>
-                  <slip>0</slip>
-                </ode>
-              </torsional>
             </friction>
-            <bounce>
-              <restitution_coefficient>0</restitution_coefficient>
-              <threshold>1e+06</threshold>
-            </bounce>
             <contact>
-              <collide_without_contact>0</collide_without_contact>
-              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
-              <collide_bitmask>1</collide_bitmask>
               <ode>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
+                <kp>1e+07</kp>
                 <kd>1</kd>
-                <max_vel>0.01</max_vel>
-                <min_depth>0</min_depth>
+                <max_vel>0.001</max_vel>
+                <min_depth>0.1</min_depth>
               </ode>
-              <bullet>
-                <split_impulse>1</split_impulse>
-                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
-                <kd>1</kd>
-              </bullet>
             </contact>
           </surface>
         </collision>
       </link>
-      <static>0</static>
-      <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>-0.09391 0.233802 1.06 0 -0 0</pose>
     </model>
     <model name='pawn_black_clone_5'>
+      <static>0</static>
       <link name='link_0'>
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>1e-06</ixx>
+            <ixx>0.000001</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>1e-06</iyy>
+            <iyy>0.000001</iyy>
             <iyz>0</iyz>
-            <izz>5e-07</izz>
+            <izz>0.0000005</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
@@ -3194,85 +2584,57 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0.015 0 0 0</pose>
           <geometry>
-            <mesh>
-              <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
+            <!--mesh>
+      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
+      <scale>1 1 1</scale>
+      </mesh-->
+            <cylinder>
+              <radius>0.01</radius>
+              <length>0.03</length>
+            </cylinder>
           </geometry>
           <surface>
             <friction>
               <ode>
                 <mu>1</mu>
                 <mu2>1</mu2>
-                <fdir1>0 0 0</fdir1>
-                <slip1>0</slip1>
-                <slip2>0</slip2>
               </ode>
-              <torsional>
-                <coefficient>1</coefficient>
-                <patch_radius>0</patch_radius>
-                <surface_radius>0</surface_radius>
-                <use_patch_radius>1</use_patch_radius>
-                <ode>
-                  <slip>0</slip>
-                </ode>
-              </torsional>
             </friction>
-            <bounce>
-              <restitution_coefficient>0</restitution_coefficient>
-              <threshold>1e+06</threshold>
-            </bounce>
             <contact>
-              <collide_without_contact>0</collide_without_contact>
-              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
-              <collide_bitmask>1</collide_bitmask>
               <ode>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
+                <kp>1e+07</kp>
                 <kd>1</kd>
-                <max_vel>0.01</max_vel>
-                <min_depth>0</min_depth>
+                <max_vel>0.001</max_vel>
+                <min_depth>0.1</min_depth>
               </ode>
-              <bullet>
-                <split_impulse>1</split_impulse>
-                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
-                <kd>1</kd>
-              </bullet>
             </contact>
           </surface>
         </collision>
       </link>
-      <static>0</static>
-      <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>-0.133312 0.23396 1.06 0 -0 0</pose>
     </model>
     <model name='rook_black'>
+      <static>0</static>
       <link name='link_0'>
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>1e-06</ixx>
+            <ixx>0.000001</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>1e-06</iyy>
+            <iyy>0.000001</iyy>
             <iyz>0</iyz>
-            <izz>5e-07</izz>
+            <izz>0.0000005</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/rook.dae</uri>
@@ -3299,85 +2661,57 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0.015 0 0 0</pose>
           <geometry>
-            <mesh>
-              <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/rook.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
+            <!--mesh>
+      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/rook.dae</uri>
+      <scale>1 1 1</scale>
+      </mesh-->
+            <cylinder>
+              <radius>0.01</radius>
+              <length>0.03</length>
+            </cylinder>
           </geometry>
           <surface>
             <friction>
               <ode>
                 <mu>1</mu>
                 <mu2>1</mu2>
-                <fdir1>0 0 0</fdir1>
-                <slip1>0</slip1>
-                <slip2>0</slip2>
               </ode>
-              <torsional>
-                <coefficient>1</coefficient>
-                <patch_radius>0</patch_radius>
-                <surface_radius>0</surface_radius>
-                <use_patch_radius>1</use_patch_radius>
-                <ode>
-                  <slip>0</slip>
-                </ode>
-              </torsional>
             </friction>
-            <bounce>
-              <restitution_coefficient>0</restitution_coefficient>
-              <threshold>1e+06</threshold>
-            </bounce>
             <contact>
-              <collide_without_contact>0</collide_without_contact>
-              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
-              <collide_bitmask>1</collide_bitmask>
               <ode>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
+                <kp>1e+07</kp>
                 <kd>1</kd>
-                <max_vel>0.01</max_vel>
-                <min_depth>0</min_depth>
+                <max_vel>0.001</max_vel>
+                <min_depth>0.1</min_depth>
               </ode>
-              <bullet>
-                <split_impulse>1</split_impulse>
-                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
-                <kd>1</kd>
-              </bullet>
             </contact>
           </surface>
         </collision>
       </link>
-      <static>0</static>
-      <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>-0.243457 1.72958 0 0 -0 0</pose>
     </model>
     <model name='rook_black_clone'>
+      <static>0</static>
       <link name='link_0'>
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>1e-06</ixx>
+            <ixx>0.000001</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>1e-06</iyy>
+            <iyy>0.000001</iyy>
             <iyz>0</iyz>
-            <izz>5e-07</izz>
+            <izz>0.0000005</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/rook.dae</uri>
@@ -3404,85 +2738,57 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0.015 0 0 0</pose>
           <geometry>
-            <mesh>
-              <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/rook.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
+            <!--mesh>
+      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/rook.dae</uri>
+      <scale>1 1 1</scale>
+      </mesh-->
+            <cylinder>
+              <radius>0.01</radius>
+              <length>0.03</length>
+            </cylinder>
           </geometry>
           <surface>
             <friction>
               <ode>
                 <mu>1</mu>
                 <mu2>1</mu2>
-                <fdir1>0 0 0</fdir1>
-                <slip1>0</slip1>
-                <slip2>0</slip2>
               </ode>
-              <torsional>
-                <coefficient>1</coefficient>
-                <patch_radius>0</patch_radius>
-                <surface_radius>0</surface_radius>
-                <use_patch_radius>1</use_patch_radius>
-                <ode>
-                  <slip>0</slip>
-                </ode>
-              </torsional>
             </friction>
-            <bounce>
-              <restitution_coefficient>0</restitution_coefficient>
-              <threshold>1e+06</threshold>
-            </bounce>
             <contact>
-              <collide_without_contact>0</collide_without_contact>
-              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
-              <collide_bitmask>1</collide_bitmask>
               <ode>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
+                <kp>1e+07</kp>
                 <kd>1</kd>
-                <max_vel>0.01</max_vel>
-                <min_depth>0</min_depth>
+                <max_vel>0.001</max_vel>
+                <min_depth>0.1</min_depth>
               </ode>
-              <bullet>
-                <split_impulse>1</split_impulse>
-                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
-                <kd>1</kd>
-              </bullet>
             </contact>
           </surface>
         </collision>
       </link>
-      <static>0</static>
-      <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>-0.131387 0.196622 1.06 0 -0 0</pose>
     </model>
     <model name='knight_black'>
+      <static>0</static>
       <link name='link_0'>
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>1e-06</ixx>
+            <ixx>0.000001</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>1e-06</iyy>
+            <iyy>0.000001</iyy>
             <iyz>0</iyz>
-            <izz>5e-07</izz>
+            <izz>0.0000005</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/knight.dae</uri>
@@ -3509,85 +2815,57 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0.015 0 0 0</pose>
           <geometry>
-            <mesh>
-              <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/knight.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
+            <!--mesh>
+      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/knight.dae</uri>
+      <scale>1 1 1</scale>
+      </mesh-->
+            <cylinder>
+              <radius>0.01</radius>
+              <length>0.03</length>
+            </cylinder>
           </geometry>
           <surface>
             <friction>
               <ode>
                 <mu>1</mu>
                 <mu2>1</mu2>
-                <fdir1>0 0 0</fdir1>
-                <slip1>0</slip1>
-                <slip2>0</slip2>
               </ode>
-              <torsional>
-                <coefficient>1</coefficient>
-                <patch_radius>0</patch_radius>
-                <surface_radius>0</surface_radius>
-                <use_patch_radius>1</use_patch_radius>
-                <ode>
-                  <slip>0</slip>
-                </ode>
-              </torsional>
             </friction>
-            <bounce>
-              <restitution_coefficient>0</restitution_coefficient>
-              <threshold>1e+06</threshold>
-            </bounce>
             <contact>
-              <collide_without_contact>0</collide_without_contact>
-              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
-              <collide_bitmask>1</collide_bitmask>
               <ode>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
+                <kp>1e+07</kp>
                 <kd>1</kd>
-                <max_vel>0.01</max_vel>
-                <min_depth>0</min_depth>
+                <max_vel>0.001</max_vel>
+                <min_depth>0.1</min_depth>
               </ode>
-              <bullet>
-                <split_impulse>1</split_impulse>
-                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
-                <kd>1</kd>
-              </bullet>
             </contact>
           </surface>
         </collision>
       </link>
-      <static>0</static>
-      <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>-0.342835 1.76725 0 0 -0 0</pose>
     </model>
     <model name='knight_black_clone'>
+      <static>0</static>
       <link name='link_0'>
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>1e-06</ixx>
+            <ixx>0.000001</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>1e-06</iyy>
+            <iyy>0.000001</iyy>
             <iyz>0</iyz>
-            <izz>5e-07</izz>
+            <izz>0.0000005</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/knight.dae</uri>
@@ -3614,85 +2892,57 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0.015 0 0 0</pose>
           <geometry>
-            <mesh>
-              <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/knight.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
+            <!--mesh>
+      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/knight.dae</uri>
+      <scale>1 1 1</scale>
+      </mesh-->
+            <cylinder>
+              <radius>0.01</radius>
+              <length>0.03</length>
+            </cylinder>
           </geometry>
           <surface>
             <friction>
               <ode>
                 <mu>1</mu>
                 <mu2>1</mu2>
-                <fdir1>0 0 0</fdir1>
-                <slip1>0</slip1>
-                <slip2>0</slip2>
               </ode>
-              <torsional>
-                <coefficient>1</coefficient>
-                <patch_radius>0</patch_radius>
-                <surface_radius>0</surface_radius>
-                <use_patch_radius>1</use_patch_radius>
-                <ode>
-                  <slip>0</slip>
-                </ode>
-              </torsional>
             </friction>
-            <bounce>
-              <restitution_coefficient>0</restitution_coefficient>
-              <threshold>1e+06</threshold>
-            </bounce>
             <contact>
-              <collide_without_contact>0</collide_without_contact>
-              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
-              <collide_bitmask>1</collide_bitmask>
               <ode>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
+                <kp>1e+07</kp>
                 <kd>1</kd>
-                <max_vel>0.01</max_vel>
-                <min_depth>0</min_depth>
+                <max_vel>0.001</max_vel>
+                <min_depth>0.1</min_depth>
               </ode>
-              <bullet>
-                <split_impulse>1</split_impulse>
-                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
-                <kd>1</kd>
-              </bullet>
             </contact>
           </surface>
         </collision>
       </link>
-      <static>0</static>
-      <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>-0.091994 0.19439 1.06 0 -0 0</pose>
     </model>
     <model name='bishop_black'>
+      <static>0</static>
       <link name='link_0'>
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>1e-06</ixx>
+            <ixx>0.000001</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>1e-06</iyy>
+            <iyy>0.000001</iyy>
             <iyz>0</iyz>
-            <izz>5e-07</izz>
+            <izz>0.0000005</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/bishop.dae</uri>
@@ -3719,85 +2969,57 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0.015 0 0 0</pose>
           <geometry>
-            <mesh>
-              <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/bishop.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
+            <!--mesh>
+      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/bishop.dae</uri>
+      <scale>1 1 1</scale>
+      </mesh-->
+            <cylinder>
+              <radius>0.01</radius>
+              <length>0.03</length>
+            </cylinder>
           </geometry>
           <surface>
             <friction>
               <ode>
                 <mu>1</mu>
                 <mu2>1</mu2>
-                <fdir1>0 0 0</fdir1>
-                <slip1>0</slip1>
-                <slip2>0</slip2>
               </ode>
-              <torsional>
-                <coefficient>1</coefficient>
-                <patch_radius>0</patch_radius>
-                <surface_radius>0</surface_radius>
-                <use_patch_radius>1</use_patch_radius>
-                <ode>
-                  <slip>0</slip>
-                </ode>
-              </torsional>
             </friction>
-            <bounce>
-              <restitution_coefficient>0</restitution_coefficient>
-              <threshold>1e+06</threshold>
-            </bounce>
             <contact>
-              <collide_without_contact>0</collide_without_contact>
-              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
-              <collide_bitmask>1</collide_bitmask>
               <ode>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
+                <kp>1e+07</kp>
                 <kd>1</kd>
-                <max_vel>0.01</max_vel>
-                <min_depth>0</min_depth>
+                <max_vel>0.001</max_vel>
+                <min_depth>0.1</min_depth>
               </ode>
-              <bullet>
-                <split_impulse>1</split_impulse>
-                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
-                <kd>1</kd>
-              </bullet>
             </contact>
           </surface>
         </collision>
       </link>
-      <static>0</static>
-      <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>-0.353203 1.76729 0 0 -0 0</pose>
     </model>
     <model name='bishop_black_clone'>
+      <static>0</static>
       <link name='link_0'>
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>1e-06</ixx>
+            <ixx>0.000001</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>1e-06</iyy>
+            <iyy>0.000001</iyy>
             <iyz>0</iyz>
-            <izz>5e-07</izz>
+            <izz>0.0000005</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/bishop.dae</uri>
@@ -3824,85 +3046,57 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0.015 0 0 0</pose>
           <geometry>
-            <mesh>
-              <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/bishop.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
+            <!--mesh>
+      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/bishop.dae</uri>
+      <scale>1 1 1</scale>
+      </mesh-->
+            <cylinder>
+              <radius>0.01</radius>
+              <length>0.03</length>
+            </cylinder>
           </geometry>
           <surface>
             <friction>
               <ode>
                 <mu>1</mu>
                 <mu2>1</mu2>
-                <fdir1>0 0 0</fdir1>
-                <slip1>0</slip1>
-                <slip2>0</slip2>
               </ode>
-              <torsional>
-                <coefficient>1</coefficient>
-                <patch_radius>0</patch_radius>
-                <surface_radius>0</surface_radius>
-                <use_patch_radius>1</use_patch_radius>
-                <ode>
-                  <slip>0</slip>
-                </ode>
-              </torsional>
             </friction>
-            <bounce>
-              <restitution_coefficient>0</restitution_coefficient>
-              <threshold>1e+06</threshold>
-            </bounce>
             <contact>
-              <collide_without_contact>0</collide_without_contact>
-              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
-              <collide_bitmask>1</collide_bitmask>
               <ode>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
+                <kp>1e+07</kp>
                 <kd>1</kd>
-                <max_vel>0.01</max_vel>
-                <min_depth>0</min_depth>
+                <max_vel>0.001</max_vel>
+                <min_depth>0.1</min_depth>
               </ode>
-              <bullet>
-                <split_impulse>1</split_impulse>
-                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
-                <kd>1</kd>
-              </bullet>
             </contact>
           </surface>
         </collision>
       </link>
-      <static>0</static>
-      <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>-0.054656 0.196313 1.06 0 -0 0</pose>
     </model>
     <model name='queen_black'>
+      <static>0</static>
       <link name='link_0'>
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>1e-06</ixx>
+            <ixx>0.000001</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>1e-06</iyy>
+            <iyy>0.000001</iyy>
             <iyz>0</iyz>
-            <izz>5e-07</izz>
+            <izz>0.0000005</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/queen.dae</uri>
@@ -3929,85 +3123,57 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0.015 0 0 0</pose>
           <geometry>
-            <mesh>
-              <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/queen.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
+            <!--mesh>
+      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/queen.dae</uri>
+      <scale>1 1 1</scale>
+      </mesh-->
+            <cylinder>
+              <radius>0.01</radius>
+              <length>0.03</length>
+            </cylinder>
           </geometry>
           <surface>
             <friction>
               <ode>
                 <mu>1</mu>
                 <mu2>1</mu2>
-                <fdir1>0 0 0</fdir1>
-                <slip1>0</slip1>
-                <slip2>0</slip2>
               </ode>
-              <torsional>
-                <coefficient>1</coefficient>
-                <patch_radius>0</patch_radius>
-                <surface_radius>0</surface_radius>
-                <use_patch_radius>1</use_patch_radius>
-                <ode>
-                  <slip>0</slip>
-                </ode>
-              </torsional>
             </friction>
-            <bounce>
-              <restitution_coefficient>0</restitution_coefficient>
-              <threshold>1e+06</threshold>
-            </bounce>
             <contact>
-              <collide_without_contact>0</collide_without_contact>
-              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
-              <collide_bitmask>1</collide_bitmask>
               <ode>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
+                <kp>1e+07</kp>
                 <kd>1</kd>
-                <max_vel>0.01</max_vel>
-                <min_depth>0</min_depth>
+                <max_vel>0.001</max_vel>
+                <min_depth>0.1</min_depth>
               </ode>
-              <bullet>
-                <split_impulse>1</split_impulse>
-                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
-                <kd>1</kd>
-              </bullet>
             </contact>
           </surface>
         </collision>
       </link>
-      <static>0</static>
-      <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>-0.440332 1.75515 0 0 -0 0</pose>
     </model>
     <model name='king_black'>
+      <static>0</static>
       <link name='link_0'>
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>1e-06</ixx>
+            <ixx>0.000001</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>1e-06</iyy>
+            <iyy>0.000001</iyy>
             <iyz>0</iyz>
-            <izz>5e-07</izz>
+            <izz>0.0000005</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/king.dae</uri>
@@ -4034,85 +3200,57 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0.015 0 0 0</pose>
           <geometry>
-            <mesh>
-              <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/king.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
+            <!--mesh>
+      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/king.dae</uri>
+      <scale>1 1 1</scale>
+      </mesh-->
+            <cylinder>
+              <radius>0.01</radius>
+              <length>0.03</length>
+            </cylinder>
           </geometry>
           <surface>
             <friction>
               <ode>
                 <mu>1</mu>
                 <mu2>1</mu2>
-                <fdir1>0 0 0</fdir1>
-                <slip1>0</slip1>
-                <slip2>0</slip2>
               </ode>
-              <torsional>
-                <coefficient>1</coefficient>
-                <patch_radius>0</patch_radius>
-                <surface_radius>0</surface_radius>
-                <use_patch_radius>1</use_patch_radius>
-                <ode>
-                  <slip>0</slip>
-                </ode>
-              </torsional>
             </friction>
-            <bounce>
-              <restitution_coefficient>0</restitution_coefficient>
-              <threshold>1e+06</threshold>
-            </bounce>
             <contact>
-              <collide_without_contact>0</collide_without_contact>
-              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
-              <collide_bitmask>1</collide_bitmask>
               <ode>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
+                <kp>1e+07</kp>
                 <kd>1</kd>
-                <max_vel>0.01</max_vel>
-                <min_depth>0</min_depth>
+                <max_vel>0.001</max_vel>
+                <min_depth>0.1</min_depth>
               </ode>
-              <bullet>
-                <split_impulse>1</split_impulse>
-                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
-                <kd>1</kd>
-              </bullet>
             </contact>
           </surface>
         </collision>
       </link>
-      <static>0</static>
-      <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>-0.390515 1.76949 0 0 -0 0</pose>
     </model>
     <model name='pawn_white_clone'>
+      <static>0</static>
       <link name='link_0'>
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>1e-06</ixx>
+            <ixx>0.000001</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>1e-06</iyy>
+            <iyy>0.000001</iyy>
             <iyz>0</iyz>
-            <izz>5e-07</izz>
+            <izz>0.0000005</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
@@ -4139,85 +3277,57 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0.015 0 0 0</pose>
           <geometry>
-            <mesh>
-              <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
+            <!--mesh>
+      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
+      <scale>1 1 1</scale>
+      </mesh-->
+            <cylinder>
+              <radius>0.01</radius>
+              <length>0.03</length>
+            </cylinder>
           </geometry>
           <surface>
             <friction>
               <ode>
                 <mu>1</mu>
                 <mu2>1</mu2>
-                <fdir1>0 0 0</fdir1>
-                <slip1>0</slip1>
-                <slip2>0</slip2>
               </ode>
-              <torsional>
-                <coefficient>1</coefficient>
-                <patch_radius>0</patch_radius>
-                <surface_radius>0</surface_radius>
-                <use_patch_radius>1</use_patch_radius>
-                <ode>
-                  <slip>0</slip>
-                </ode>
-              </torsional>
             </friction>
-            <bounce>
-              <restitution_coefficient>0</restitution_coefficient>
-              <threshold>1e+06</threshold>
-            </bounce>
             <contact>
-              <collide_without_contact>0</collide_without_contact>
-              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
-              <collide_bitmask>1</collide_bitmask>
               <ode>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
+                <kp>1e+07</kp>
                 <kd>1</kd>
-                <max_vel>0.01</max_vel>
-                <min_depth>0</min_depth>
+                <max_vel>0.001</max_vel>
+                <min_depth>0.1</min_depth>
               </ode>
-              <bullet>
-                <split_impulse>1</split_impulse>
-                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
-                <kd>1</kd>
-              </bullet>
             </contact>
           </surface>
         </collision>
       </link>
-      <static>0</static>
-      <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>0.092991 0.426529 1.05999 -4.1e-05 -0.000174 -3e-06</pose>
     </model>
     <model name='pawn_white_clone_4'>
+      <static>0</static>
       <link name='link_0'>
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>1e-06</ixx>
+            <ixx>0.000001</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>1e-06</iyy>
+            <iyy>0.000001</iyy>
             <iyz>0</iyz>
-            <izz>5e-07</izz>
+            <izz>0.0000005</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
@@ -4244,63 +3354,35 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0.015 0 0 0</pose>
           <geometry>
-            <mesh>
-              <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
+            <!--mesh>
+      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
+      <scale>1 1 1</scale>
+      </mesh-->
+            <cylinder>
+              <radius>0.01</radius>
+              <length>0.03</length>
+            </cylinder>
           </geometry>
           <surface>
             <friction>
               <ode>
                 <mu>1</mu>
                 <mu2>1</mu2>
-                <fdir1>0 0 0</fdir1>
-                <slip1>0</slip1>
-                <slip2>0</slip2>
               </ode>
-              <torsional>
-                <coefficient>1</coefficient>
-                <patch_radius>0</patch_radius>
-                <surface_radius>0</surface_radius>
-                <use_patch_radius>1</use_patch_radius>
-                <ode>
-                  <slip>0</slip>
-                </ode>
-              </torsional>
             </friction>
-            <bounce>
-              <restitution_coefficient>0</restitution_coefficient>
-              <threshold>1e+06</threshold>
-            </bounce>
             <contact>
-              <collide_without_contact>0</collide_without_contact>
-              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
-              <collide_bitmask>1</collide_bitmask>
               <ode>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
+                <kp>1e+07</kp>
                 <kd>1</kd>
-                <max_vel>0.01</max_vel>
-                <min_depth>0</min_depth>
+                <max_vel>0.001</max_vel>
+                <min_depth>0.1</min_depth>
               </ode>
-              <bullet>
-                <split_impulse>1</split_impulse>
-                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
-                <soft_cfm>0</soft_cfm>
-                <soft_erp>0.2</soft_erp>
-                <kp>1e+13</kp>
-                <kd>1</kd>
-              </bullet>
             </contact>
           </surface>
         </collision>
       </link>
-      <static>0</static>
-      <allow_auto_disable>1</allow_auto_disable>
-      <pose frame=''>-0.09777 0.42531 1.05999 -4.1e-05 -0.000174 -3e-06</pose>
     </model>
   </world>
 </sdf>
