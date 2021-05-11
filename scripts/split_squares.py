@@ -23,7 +23,7 @@ path = rospack.get_path('chess_detector')
 path = path + "/tmp/"
 
 save_delay = 5.0
-#save_delay = float("inf")
+save_delay = float("inf")
 last_save_time = 0
 
 def split_images(msg):
