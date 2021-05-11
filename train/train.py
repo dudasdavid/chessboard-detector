@@ -18,6 +18,7 @@ import os
 import matplotlib
 import matplotlib.pyplot as plt
 
+image_size = 100
 
 class LeNet:
   @staticmethod
@@ -63,25 +64,44 @@ random.shuffle(imagePaths)
 for imagePath in imagePaths:
     # load the image, pre-process it, and store it in the data list
     image = cv2.imread(imagePath)
-    image = cv2.resize(image, (200, 200))
+    image = cv2.resize(image, (image_size, image_size))
     #image = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
     image = img_to_array(image)
     data.append(image)
     # extract the class label from the image path and update the
     # labels list
     label = imagePath.split(os.path.sep)[-2]
-    print(label)
-    if label == 'forward':
+    #print(label)
+    if label == 'empty':
         label = 0
-    elif label == 'right':
+    elif label == 'b_p':
         label = 1
-    elif label == 'left':
+    elif label == 'b_r':
         label = 2
-    else:
+    elif label == 'b_n':
         label = 3
+    elif label == 'b_b':
+        label = 4
+    elif label == 'b_k':
+        label = 5
+    elif label == 'b_q':
+        label = 6
+    elif label == 'w_P':
+        label = 7
+    elif label == 'w_R':
+        label = 8
+    elif label == 'w_N':
+        label = 9
+    elif label == 'w_B':
+        label = 10
+    elif label == 'w_K':
+        label = 11
+    elif label == 'w_Q':
+        label = 12
+    else:
+        raise ValueError('Unknown class: %s!' % label)
     labels.append(label)
-    
-exit()    
+        
 # scale the raw pixel intensities to the range [0, 1]
 data = np.array(data, dtype="float") / 255.0
 labels = np.array(labels)
@@ -90,18 +110,18 @@ labels = np.array(labels)
 # the data for training and the remaining 25% for testing
 (trainX, testX, trainY, testY) = train_test_split(data,
     labels, test_size=0.25, random_state=42)# convert the labels from integers to vectors
-trainY = to_categorical(trainY, num_classes=4)
-testY = to_categorical(testY, num_classes=4)
+trainY = to_categorical(trainY, num_classes=13)
+testY = to_categorical(testY, num_classes=13)
 
+#trainX = trainX.reshape(-1, 200, 200, 3)
 
 # initialize the number of epochs to train for, initial learning rate,
 # and batch size
-EPOCHS = 40
+EPOCHS = 20
 INIT_LR = 1e-3
 BS = 32# initialize the model
 print("[INFO] compiling model...")
-#model = LeNet.build(width=28, height=28, depth=1, classes=4)
-model = CustomNet.build(width=28, height=28, depth=3, classes=4)
+model = LeNet.build(width=image_size, height=image_size, depth=3, classes=13)
 opt = Adam(lr=INIT_LR, decay=INIT_LR / EPOCHS)
 model.compile(loss="binary_crossentropy", optimizer=opt,
     metrics=["accuracy"])
@@ -114,7 +134,7 @@ history = model.fit(trainX, trainY, batch_size=BS,
  
 # save the model to disk
 print("[INFO] serializing network...")
-model.save("model_rover_s")
+model.save("chess-detector")
 
 #print(np.sum([np.prod(v.get_shape().as_list()) for v in tf.trainable_variables()]))
 model.summary()

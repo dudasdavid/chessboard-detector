@@ -3,3 +3,5 @@ keras-2.4.3
 scipy-1.6.3
 sklearn-0.0
 matplotlib-3.4.2
+imutils-0.5.4
+opencv-python-4.5.2.52
