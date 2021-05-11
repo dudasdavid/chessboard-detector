@@ -35,7 +35,6 @@
         <laser_retro>0</laser_retro>
         <max_contacts>10</max_contacts>
         <pose frame=''>0 0 0.005 0 0 0</pose>
-        <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
           <!--mesh>
             <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/chessboard.dae</uri>
