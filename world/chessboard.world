@@ -476,10 +476,10 @@
       <pose frame=''>0.466042 -0.509452 0 0 -0 0</pose>
     </model>
     <state world_name='default'>
-      <sim_time>1091 914000000</sim_time>
-      <real_time>200 221048400</real_time>
-      <wall_time>1620661842 929234300</wall_time>
-      <iterations>27447</iterations>
+      <sim_time>1211 640000000</sim_time>
+      <real_time>124 643357701</real_time>
+      <wall_time>1620830436 694512643</wall_time>
+      <iterations>119726</iterations>
       <model name='bishop_black'>
         <pose frame=''>0.056 0.19 1.125 0 -0 0</pose>
         <scale>1 1 1</scale>
@@ -681,80 +681,80 @@
         </link>
       </model>
       <model name='pawn_white'>
-        <pose frame=''>0.131 0.415 1.125 0 0 0</pose>
+        <pose frame=''>0.131 0.415 1.125 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>0.131 0.415 1.125 0 0 0</pose>
+          <pose frame=''>0.131 0.415 1.125 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 -980 0 -0 0</acceleration>
           <wrench>0 0 -9.8 0 -0 0</wrench>
         </link>
       </model>
       <model name='pawn_white_clone'>
-        <pose frame=''>0.094 0.415 1.125 0 0 0</pose>
+        <pose frame=''>0.094 0.415 1.125 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>0.094 0.415 1.125 0 0 0</pose>
+          <pose frame=''>0.094 0.415 1.125 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 -980 0 -0 0</acceleration>
           <wrench>0 0 -9.8 0 -0 0</wrench>
         </link>
       </model>
       <model name='pawn_white_clone_0'>
-        <pose frame=''>0.056 0.415 1.125 0 0 0</pose>
+        <pose frame=''>0.056 0.415 1.125 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>0.056 0.415 1.125 0 0 0</pose>
+          <pose frame=''>0.056 0.415 1.125 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 -980 0 -0 0</acceleration>
           <wrench>0 0 -9.8 0 -0 0</wrench>
         </link>
       </model>
       <model name='pawn_white_clone_1'>
-        <pose frame=''>0.019 0.415 1.125 0 0 0</pose>
+        <pose frame=''>0.019 0.415 1.125 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>0.019 0.415 1.125 0 0 0</pose>
+          <pose frame=''>0.019 0.415 1.125 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 -980 0 -0 0</acceleration>
           <wrench>0 0 -9.8 0 -0 0</wrench>
         </link>
       </model>
       <model name='pawn_white_clone_2'>
-        <pose frame=''>-0.019 0.415 1.125 0 0 0</pose>
+        <pose frame=''>-0.019 0.415 1.125 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>-0.019 0.415 1.125 0 0 0</pose>
+          <pose frame=''>-0.019 0.415 1.125 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 -980 0 -0 0</acceleration>
           <wrench>0 0 -9.8 0 -0 0</wrench>
         </link>
       </model>
       <model name='pawn_white_clone_3'>
-        <pose frame=''>-0.056 0.415 1.125 0 0 0</pose>
+        <pose frame=''>-0.056 0.415 1.125 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>-0.056 0.415 1.125 0 0 0</pose>
+          <pose frame=''>-0.056 0.415 1.125 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 -980 0 -0 0</acceleration>
           <wrench>0 0 -9.8 0 -0 0</wrench>
         </link>
       </model>
       <model name='pawn_white_clone_4'>
-        <pose frame=''>-0.094 0.415 1.125 0 0 0</pose>
+        <pose frame=''>-0.094 0.415 1.125 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>-0.094 0.415 1.125 0 0 0</pose>
+          <pose frame=''>-0.094 0.415 1.125 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 -980 0 -0 0</acceleration>
           <wrench>0 0 -9.8 0 -0 0</wrench>
         </link>
       </model>
       <model name='pawn_white_clone_5'>
-        <pose frame=''>-0.131 0.415 1.125 0 0 0</pose>
+        <pose frame=''>-0.131 0.415 1.125 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>-0.131 0.415 1.125 0 0 0</pose>
+          <pose frame=''>-0.131 0.415 1.125 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 -980 0 -0 0</acceleration>
           <wrench>0 0 -9.8 0 -0 0</wrench>
@@ -801,10 +801,10 @@
         </link>
       </model>
       <model name='rook_white'>
-        <pose frame=''>0.131 0.453 1.125 0 0 0</pose>
+        <pose frame=''>0.131 0.453 1.125 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>0.131 0.453 1.125 0 0 0</pose>
+          <pose frame=''>0.131 0.453 1.125 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 -980 0 -0 0</acceleration>
           <wrench>0 0 -9.8 0 -0 0</wrench>
@@ -843,10 +843,16 @@
       <light name='sun'>
         <pose frame=''>0 0 10 0 -0 0</pose>
       </light>
+      <light name='user_light_0'>
+        <pose frame=''>0.5 0 2 0 -0 0</pose>
+      </light>
+      <light name='user_light_1'>
+        <pose frame=''>-0.5 0 2 0 -0 0</pose>
+      </light>
     </state>
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose frame=''>-0.424404 -0.325389 1.41444 0 0.469796 0.748</pose>
+        <pose frame=''>-1.08686 -1.03108 1.63848 0 0.469796 0.748</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
@@ -864,15 +870,15 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose frame=''>0 0 0 0 0 0</pose>
+        <pose frame=''>0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/chessboard.dae</uri>
@@ -885,12 +891,8 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0.005 0 0 0</pose>
+          <pose frame=''>0 0 0.005 0 -0 0</pose>
           <geometry>
-            <!--mesh>
-        <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/chessboard.dae</uri>
-        <scale>1 1 1</scale>
-      </mesh-->
             <box>
               <size>0.368 0.368 0.01</size>
             </box>
@@ -901,6 +903,9 @@
                 <mu>1</mu>
                 <mu2>1</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
@@ -910,6 +915,7 @@
                 <min_depth>0.1</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
         </collision>
       </link>
@@ -920,21 +926,21 @@
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>0.000001</ixx>
+            <ixx>1e-06</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>0.000001</iyy>
+            <iyy>1e-06</iyy>
             <iyz>0</iyz>
-            <izz>0.0000005</izz>
+            <izz>5e-07</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
         </inertial>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
@@ -961,12 +967,8 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0.015 0 0 0</pose>
+          <pose frame=''>0 0 0.015 0 -0 0</pose>
           <geometry>
-            <!--mesh>
-      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
-      <scale>1 1 1</scale>
-      </mesh-->
             <cylinder>
               <radius>0.01</radius>
               <length>0.03</length>
@@ -978,6 +980,9 @@
                 <mu>1</mu>
                 <mu2>1</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
@@ -987,6 +992,7 @@
                 <min_depth>0.1</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
         </collision>
       </link>
@@ -997,21 +1003,21 @@
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>0.000001</ixx>
+            <ixx>1e-06</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>0.000001</iyy>
+            <iyy>1e-06</iyy>
             <iyz>0</iyz>
-            <izz>0.0000005</izz>
+            <izz>5e-07</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
         </inertial>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
@@ -1038,12 +1044,8 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0.015 0 0 0</pose>
+          <pose frame=''>0 0 0.015 0 -0 0</pose>
           <geometry>
-            <!--mesh>
-      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
-      <scale>1 1 1</scale>
-      </mesh-->
             <cylinder>
               <radius>0.01</radius>
               <length>0.03</length>
@@ -1055,6 +1057,9 @@
                 <mu>1</mu>
                 <mu2>1</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
@@ -1064,6 +1069,7 @@
                 <min_depth>0.1</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
         </collision>
       </link>
@@ -1074,21 +1080,21 @@
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>0.000001</ixx>
+            <ixx>1e-06</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>0.000001</iyy>
+            <iyy>1e-06</iyy>
             <iyz>0</iyz>
-            <izz>0.0000005</izz>
+            <izz>5e-07</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
         </inertial>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
@@ -1115,12 +1121,8 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0.015 0 0 0</pose>
+          <pose frame=''>0 0 0.015 0 -0 0</pose>
           <geometry>
-            <!--mesh>
-      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
-      <scale>1 1 1</scale>
-      </mesh-->
             <cylinder>
               <radius>0.01</radius>
               <length>0.03</length>
@@ -1132,6 +1134,9 @@
                 <mu>1</mu>
                 <mu2>1</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
@@ -1141,6 +1146,7 @@
                 <min_depth>0.1</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
         </collision>
       </link>
@@ -1151,21 +1157,21 @@
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>0.000001</ixx>
+            <ixx>1e-06</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>0.000001</iyy>
+            <iyy>1e-06</iyy>
             <iyz>0</iyz>
-            <izz>0.0000005</izz>
+            <izz>5e-07</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
         </inertial>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
@@ -1192,12 +1198,8 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0.015 0 0 0</pose>
+          <pose frame=''>0 0 0.015 0 -0 0</pose>
           <geometry>
-            <!--mesh>
-      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
-      <scale>1 1 1</scale>
-      </mesh-->
             <cylinder>
               <radius>0.01</radius>
               <length>0.03</length>
@@ -1209,6 +1211,9 @@
                 <mu>1</mu>
                 <mu2>1</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
@@ -1218,6 +1223,7 @@
                 <min_depth>0.1</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
         </collision>
       </link>
@@ -1228,21 +1234,21 @@
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>0.000001</ixx>
+            <ixx>1e-06</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>0.000001</iyy>
+            <iyy>1e-06</iyy>
             <iyz>0</iyz>
-            <izz>0.0000005</izz>
+            <izz>5e-07</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
         </inertial>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
@@ -1269,12 +1275,8 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0.015 0 0 0</pose>
+          <pose frame=''>0 0 0.015 0 -0 0</pose>
           <geometry>
-            <!--mesh>
-      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
-      <scale>1 1 1</scale>
-      </mesh-->
             <cylinder>
               <radius>0.01</radius>
               <length>0.03</length>
@@ -1286,6 +1288,9 @@
                 <mu>1</mu>
                 <mu2>1</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
@@ -1295,6 +1300,7 @@
                 <min_depth>0.1</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
         </collision>
       </link>
@@ -1305,21 +1311,21 @@
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>0.000001</ixx>
+            <ixx>1e-06</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>0.000001</iyy>
+            <iyy>1e-06</iyy>
             <iyz>0</iyz>
-            <izz>0.0000005</izz>
+            <izz>5e-07</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
         </inertial>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
@@ -1346,12 +1352,8 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0.015 0 0 0</pose>
+          <pose frame=''>0 0 0.015 0 -0 0</pose>
           <geometry>
-            <!--mesh>
-      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
-      <scale>1 1 1</scale>
-      </mesh-->
             <cylinder>
               <radius>0.01</radius>
               <length>0.03</length>
@@ -1363,6 +1365,9 @@
                 <mu>1</mu>
                 <mu2>1</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
@@ -1372,6 +1377,7 @@
                 <min_depth>0.1</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
         </collision>
       </link>
@@ -1382,21 +1388,21 @@
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>0.000001</ixx>
+            <ixx>1e-06</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>0.000001</iyy>
+            <iyy>1e-06</iyy>
             <iyz>0</iyz>
-            <izz>0.0000005</izz>
+            <izz>5e-07</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
         </inertial>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/rook.dae</uri>
@@ -1423,12 +1429,8 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0.015 0 0 0</pose>
+          <pose frame=''>0 0 0.015 0 -0 0</pose>
           <geometry>
-            <!--mesh>
-      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/rook.dae</uri>
-      <scale>1 1 1</scale>
-      </mesh-->
             <cylinder>
               <radius>0.01</radius>
               <length>0.03</length>
@@ -1440,6 +1442,9 @@
                 <mu>1</mu>
                 <mu2>1</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
@@ -1449,6 +1454,7 @@
                 <min_depth>0.1</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
         </collision>
       </link>
@@ -1459,21 +1465,21 @@
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>0.000001</ixx>
+            <ixx>1e-06</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>0.000001</iyy>
+            <iyy>1e-06</iyy>
             <iyz>0</iyz>
-            <izz>0.0000005</izz>
+            <izz>5e-07</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
         </inertial>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/rook.dae</uri>
@@ -1500,12 +1506,8 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0.015 0 0 0</pose>
+          <pose frame=''>0 0 0.015 0 -0 0</pose>
           <geometry>
-            <!--mesh>
-      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/rook.dae</uri>
-      <scale>1 1 1</scale>
-      </mesh-->
             <cylinder>
               <radius>0.01</radius>
               <length>0.03</length>
@@ -1517,6 +1519,9 @@
                 <mu>1</mu>
                 <mu2>1</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
@@ -1526,6 +1531,7 @@
                 <min_depth>0.1</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
         </collision>
       </link>
@@ -1536,21 +1542,21 @@
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>0.000001</ixx>
+            <ixx>1e-06</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>0.000001</iyy>
+            <iyy>1e-06</iyy>
             <iyz>0</iyz>
-            <izz>0.0000005</izz>
+            <izz>5e-07</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
         </inertial>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/knight.dae</uri>
@@ -1577,12 +1583,8 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0.015 0 0 0</pose>
+          <pose frame=''>0 0 0.015 0 -0 0</pose>
           <geometry>
-            <!--mesh>
-      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/knight.dae</uri>
-      <scale>1 1 1</scale>
-      </mesh-->
             <cylinder>
               <radius>0.01</radius>
               <length>0.03</length>
@@ -1594,6 +1596,9 @@
                 <mu>1</mu>
                 <mu2>1</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
@@ -1603,6 +1608,7 @@
                 <min_depth>0.1</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
         </collision>
       </link>
@@ -1613,21 +1619,21 @@
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>0.000001</ixx>
+            <ixx>1e-06</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>0.000001</iyy>
+            <iyy>1e-06</iyy>
             <iyz>0</iyz>
-            <izz>0.0000005</izz>
+            <izz>5e-07</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
         </inertial>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/knight.dae</uri>
@@ -1654,12 +1660,8 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0.015 0 0 0</pose>
+          <pose frame=''>0 0 0.015 0 -0 0</pose>
           <geometry>
-            <!--mesh>
-      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/knight.dae</uri>
-      <scale>1 1 1</scale>
-      </mesh-->
             <cylinder>
               <radius>0.01</radius>
               <length>0.03</length>
@@ -1671,6 +1673,9 @@
                 <mu>1</mu>
                 <mu2>1</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
@@ -1680,6 +1685,7 @@
                 <min_depth>0.1</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
         </collision>
       </link>
@@ -1690,21 +1696,21 @@
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>0.000001</ixx>
+            <ixx>1e-06</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>0.000001</iyy>
+            <iyy>1e-06</iyy>
             <iyz>0</iyz>
-            <izz>0.0000005</izz>
+            <izz>5e-07</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
         </inertial>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/bishop.dae</uri>
@@ -1715,7 +1721,7 @@
             <lighting>1</lighting>
             <script>
               <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/White</name>
+              <name>Gazebo/Grey</name>
             </script>
             <shader type='vertex'>
               <normal_map>__default__</normal_map>
@@ -1731,12 +1737,8 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0.015 0 0 0</pose>
+          <pose frame=''>0 0 0.015 0 -0 0</pose>
           <geometry>
-            <!--mesh>
-      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/bishop.dae</uri>
-      <scale>1 1 1</scale>
-      </mesh-->
             <cylinder>
               <radius>0.01</radius>
               <length>0.03</length>
@@ -1748,6 +1750,9 @@
                 <mu>1</mu>
                 <mu2>1</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <collide_without_contact>0</collide_without_contact>
@@ -1760,6 +1765,7 @@
                 <min_depth>0.1</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
         </collision>
       </link>
@@ -1770,21 +1776,21 @@
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>0.000001</ixx>
+            <ixx>1e-06</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>0.000001</iyy>
+            <iyy>1e-06</iyy>
             <iyz>0</iyz>
-            <izz>0.0000005</izz>
+            <izz>5e-07</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
         </inertial>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/bishop.dae</uri>
@@ -1795,7 +1801,7 @@
             <lighting>1</lighting>
             <script>
               <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/White</name>
+              <name>Gazebo/Grey</name>
             </script>
             <shader type='vertex'>
               <normal_map>__default__</normal_map>
@@ -1811,12 +1817,8 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0.015 0 0 0</pose>
+          <pose frame=''>0 0 0.015 0 -0 0</pose>
           <geometry>
-            <!--mesh>
-      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/bishop.dae</uri>
-      <scale>1 1 1</scale>
-      </mesh-->
             <cylinder>
               <radius>0.01</radius>
               <length>0.03</length>
@@ -1828,6 +1830,9 @@
                 <mu>1</mu>
                 <mu2>1</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <collide_without_contact>0</collide_without_contact>
@@ -1840,6 +1845,7 @@
                 <min_depth>0.1</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
         </collision>
       </link>
@@ -1850,21 +1856,21 @@
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>0.000001</ixx>
+            <ixx>1e-06</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>0.000001</iyy>
+            <iyy>1e-06</iyy>
             <iyz>0</iyz>
-            <izz>0.0000005</izz>
+            <izz>5e-07</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
         </inertial>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/queen.dae</uri>
@@ -1891,12 +1897,8 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0.015 0 0 0</pose>
+          <pose frame=''>0 0 0.015 0 -0 0</pose>
           <geometry>
-            <!--mesh>
-      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/queen.dae</uri>
-      <scale>1 1 1</scale>
-      </mesh-->
             <cylinder>
               <radius>0.01</radius>
               <length>0.03</length>
@@ -1908,6 +1910,9 @@
                 <mu>1</mu>
                 <mu2>1</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
@@ -1917,6 +1922,7 @@
                 <min_depth>0.1</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
         </collision>
       </link>
@@ -1927,21 +1933,21 @@
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>0.000001</ixx>
+            <ixx>1e-06</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>0.000001</iyy>
+            <iyy>1e-06</iyy>
             <iyz>0</iyz>
-            <izz>0.0000005</izz>
+            <izz>5e-07</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
         </inertial>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/king.dae</uri>
@@ -1968,12 +1974,8 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0.015 0 0 0</pose>
+          <pose frame=''>0 0 0.015 0 -0 0</pose>
           <geometry>
-            <!--mesh>
-      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/knight.dae</uri>
-      <scale>1 1 1</scale>
-      </mesh-->
             <cylinder>
               <radius>0.01</radius>
               <length>0.03</length>
@@ -1985,6 +1987,9 @@
                 <mu>1</mu>
                 <mu2>1</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
@@ -1994,6 +1999,7 @@
                 <min_depth>0.1</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
         </collision>
       </link>
@@ -2004,21 +2010,21 @@
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>0.000001</ixx>
+            <ixx>1e-06</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>0.000001</iyy>
+            <iyy>1e-06</iyy>
             <iyz>0</iyz>
-            <izz>0.0000005</izz>
+            <izz>5e-07</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
         </inertial>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
@@ -2045,12 +2051,8 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0.015 0 0 0</pose>
+          <pose frame=''>0 0 0.015 0 -0 0</pose>
           <geometry>
-            <!--mesh>
-      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
-      <scale>1 1 1</scale>
-      </mesh-->
             <cylinder>
               <radius>0.01</radius>
               <length>0.03</length>
@@ -2062,6 +2064,9 @@
                 <mu>1</mu>
                 <mu2>1</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
@@ -2071,6 +2076,7 @@
                 <min_depth>0.1</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
         </collision>
       </link>
@@ -2081,21 +2087,21 @@
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>0.000001</ixx>
+            <ixx>1e-06</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>0.000001</iyy>
+            <iyy>1e-06</iyy>
             <iyz>0</iyz>
-            <izz>0.0000005</izz>
+            <izz>5e-07</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
         </inertial>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
@@ -2122,12 +2128,8 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0.015 0 0 0</pose>
+          <pose frame=''>0 0 0.015 0 -0 0</pose>
           <geometry>
-            <!--mesh>
-      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
-      <scale>1 1 1</scale>
-      </mesh-->
             <cylinder>
               <radius>0.01</radius>
               <length>0.03</length>
@@ -2139,6 +2141,9 @@
                 <mu>1</mu>
                 <mu2>1</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
@@ -2148,6 +2153,7 @@
                 <min_depth>0.1</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
         </collision>
       </link>
@@ -2158,21 +2164,21 @@
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>0.000001</ixx>
+            <ixx>1e-06</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>0.000001</iyy>
+            <iyy>1e-06</iyy>
             <iyz>0</iyz>
-            <izz>0.0000005</izz>
+            <izz>5e-07</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
         </inertial>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
@@ -2199,12 +2205,8 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0.015 0 0 0</pose>
+          <pose frame=''>0 0 0.015 0 -0 0</pose>
           <geometry>
-            <!--mesh>
-      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
-      <scale>1 1 1</scale>
-      </mesh-->
             <cylinder>
               <radius>0.01</radius>
               <length>0.03</length>
@@ -2216,6 +2218,9 @@
                 <mu>1</mu>
                 <mu2>1</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
@@ -2225,6 +2230,7 @@
                 <min_depth>0.1</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
         </collision>
       </link>
@@ -2235,21 +2241,21 @@
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>0.000001</ixx>
+            <ixx>1e-06</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>0.000001</iyy>
+            <iyy>1e-06</iyy>
             <iyz>0</iyz>
-            <izz>0.0000005</izz>
+            <izz>5e-07</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
         </inertial>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
@@ -2276,12 +2282,8 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0.015 0 0 0</pose>
+          <pose frame=''>0 0 0.015 0 -0 0</pose>
           <geometry>
-            <!--mesh>
-      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
-      <scale>1 1 1</scale>
-      </mesh-->
             <cylinder>
               <radius>0.01</radius>
               <length>0.03</length>
@@ -2293,6 +2295,9 @@
                 <mu>1</mu>
                 <mu2>1</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
@@ -2302,6 +2307,7 @@
                 <min_depth>0.1</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
         </collision>
       </link>
@@ -2312,21 +2318,21 @@
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>0.000001</ixx>
+            <ixx>1e-06</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>0.000001</iyy>
+            <iyy>1e-06</iyy>
             <iyz>0</iyz>
-            <izz>0.0000005</izz>
+            <izz>5e-07</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
         </inertial>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
@@ -2353,12 +2359,8 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0.015 0 0 0</pose>
+          <pose frame=''>0 0 0.015 0 -0 0</pose>
           <geometry>
-            <!--mesh>
-      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
-      <scale>1 1 1</scale>
-      </mesh-->
             <cylinder>
               <radius>0.01</radius>
               <length>0.03</length>
@@ -2370,6 +2372,9 @@
                 <mu>1</mu>
                 <mu2>1</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
@@ -2379,6 +2384,7 @@
                 <min_depth>0.1</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
         </collision>
       </link>
@@ -2389,21 +2395,21 @@
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>0.000001</ixx>
+            <ixx>1e-06</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>0.000001</iyy>
+            <iyy>1e-06</iyy>
             <iyz>0</iyz>
-            <izz>0.0000005</izz>
+            <izz>5e-07</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
         </inertial>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
@@ -2430,12 +2436,8 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0.015 0 0 0</pose>
+          <pose frame=''>0 0 0.015 0 -0 0</pose>
           <geometry>
-            <!--mesh>
-      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
-      <scale>1 1 1</scale>
-      </mesh-->
             <cylinder>
               <radius>0.01</radius>
               <length>0.03</length>
@@ -2447,6 +2449,9 @@
                 <mu>1</mu>
                 <mu2>1</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
@@ -2456,6 +2461,7 @@
                 <min_depth>0.1</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
         </collision>
       </link>
@@ -2466,21 +2472,21 @@
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>0.000001</ixx>
+            <ixx>1e-06</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>0.000001</iyy>
+            <iyy>1e-06</iyy>
             <iyz>0</iyz>
-            <izz>0.0000005</izz>
+            <izz>5e-07</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
         </inertial>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
@@ -2507,12 +2513,8 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0.015 0 0 0</pose>
+          <pose frame=''>0 0 0.015 0 -0 0</pose>
           <geometry>
-            <!--mesh>
-      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
-      <scale>1 1 1</scale>
-      </mesh-->
             <cylinder>
               <radius>0.01</radius>
               <length>0.03</length>
@@ -2524,6 +2526,9 @@
                 <mu>1</mu>
                 <mu2>1</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
@@ -2533,6 +2538,7 @@
                 <min_depth>0.1</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
         </collision>
       </link>
@@ -2543,21 +2549,21 @@
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>0.000001</ixx>
+            <ixx>1e-06</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>0.000001</iyy>
+            <iyy>1e-06</iyy>
             <iyz>0</iyz>
-            <izz>0.0000005</izz>
+            <izz>5e-07</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
         </inertial>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
@@ -2584,12 +2590,8 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0.015 0 0 0</pose>
+          <pose frame=''>0 0 0.015 0 -0 0</pose>
           <geometry>
-            <!--mesh>
-      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
-      <scale>1 1 1</scale>
-      </mesh-->
             <cylinder>
               <radius>0.01</radius>
               <length>0.03</length>
@@ -2601,6 +2603,9 @@
                 <mu>1</mu>
                 <mu2>1</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
@@ -2610,6 +2615,7 @@
                 <min_depth>0.1</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
         </collision>
       </link>
@@ -2620,21 +2626,21 @@
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>0.000001</ixx>
+            <ixx>1e-06</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>0.000001</iyy>
+            <iyy>1e-06</iyy>
             <iyz>0</iyz>
-            <izz>0.0000005</izz>
+            <izz>5e-07</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
         </inertial>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/rook.dae</uri>
@@ -2661,12 +2667,8 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0.015 0 0 0</pose>
+          <pose frame=''>0 0 0.015 0 -0 0</pose>
           <geometry>
-            <!--mesh>
-      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/rook.dae</uri>
-      <scale>1 1 1</scale>
-      </mesh-->
             <cylinder>
               <radius>0.01</radius>
               <length>0.03</length>
@@ -2678,6 +2680,9 @@
                 <mu>1</mu>
                 <mu2>1</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
@@ -2687,6 +2692,7 @@
                 <min_depth>0.1</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
         </collision>
       </link>
@@ -2697,21 +2703,21 @@
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>0.000001</ixx>
+            <ixx>1e-06</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>0.000001</iyy>
+            <iyy>1e-06</iyy>
             <iyz>0</iyz>
-            <izz>0.0000005</izz>
+            <izz>5e-07</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
         </inertial>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/rook.dae</uri>
@@ -2738,12 +2744,8 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0.015 0 0 0</pose>
+          <pose frame=''>0 0 0.015 0 -0 0</pose>
           <geometry>
-            <!--mesh>
-      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/rook.dae</uri>
-      <scale>1 1 1</scale>
-      </mesh-->
             <cylinder>
               <radius>0.01</radius>
               <length>0.03</length>
@@ -2755,6 +2757,9 @@
                 <mu>1</mu>
                 <mu2>1</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
@@ -2764,6 +2769,7 @@
                 <min_depth>0.1</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
         </collision>
       </link>
@@ -2774,21 +2780,21 @@
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>0.000001</ixx>
+            <ixx>1e-06</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>0.000001</iyy>
+            <iyy>1e-06</iyy>
             <iyz>0</iyz>
-            <izz>0.0000005</izz>
+            <izz>5e-07</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
         </inertial>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/knight.dae</uri>
@@ -2815,12 +2821,8 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0.015 0 0 0</pose>
+          <pose frame=''>0 0 0.015 0 -0 0</pose>
           <geometry>
-            <!--mesh>
-      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/knight.dae</uri>
-      <scale>1 1 1</scale>
-      </mesh-->
             <cylinder>
               <radius>0.01</radius>
               <length>0.03</length>
@@ -2832,6 +2834,9 @@
                 <mu>1</mu>
                 <mu2>1</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
@@ -2841,6 +2846,7 @@
                 <min_depth>0.1</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
         </collision>
       </link>
@@ -2851,21 +2857,21 @@
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>0.000001</ixx>
+            <ixx>1e-06</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>0.000001</iyy>
+            <iyy>1e-06</iyy>
             <iyz>0</iyz>
-            <izz>0.0000005</izz>
+            <izz>5e-07</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
         </inertial>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/knight.dae</uri>
@@ -2892,12 +2898,8 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0.015 0 0 0</pose>
+          <pose frame=''>0 0 0.015 0 -0 0</pose>
           <geometry>
-            <!--mesh>
-      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/knight.dae</uri>
-      <scale>1 1 1</scale>
-      </mesh-->
             <cylinder>
               <radius>0.01</radius>
               <length>0.03</length>
@@ -2909,6 +2911,9 @@
                 <mu>1</mu>
                 <mu2>1</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
@@ -2918,6 +2923,7 @@
                 <min_depth>0.1</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
         </collision>
       </link>
@@ -2928,21 +2934,21 @@
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>0.000001</ixx>
+            <ixx>1e-06</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>0.000001</iyy>
+            <iyy>1e-06</iyy>
             <iyz>0</iyz>
-            <izz>0.0000005</izz>
+            <izz>5e-07</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
         </inertial>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/bishop.dae</uri>
@@ -2953,7 +2959,7 @@
             <lighting>1</lighting>
             <script>
               <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Red</name>
+              <name>Gazebo/Grey</name>
             </script>
             <shader type='vertex'>
               <normal_map>__default__</normal_map>
@@ -2969,12 +2975,8 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0.015 0 0 0</pose>
+          <pose frame=''>0 0 0.015 0 -0 0</pose>
           <geometry>
-            <!--mesh>
-      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/bishop.dae</uri>
-      <scale>1 1 1</scale>
-      </mesh-->
             <cylinder>
               <radius>0.01</radius>
               <length>0.03</length>
@@ -2986,6 +2988,9 @@
                 <mu>1</mu>
                 <mu2>1</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
@@ -2995,6 +3000,7 @@
                 <min_depth>0.1</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
         </collision>
       </link>
@@ -3005,21 +3011,21 @@
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>0.000001</ixx>
+            <ixx>1e-06</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>0.000001</iyy>
+            <iyy>1e-06</iyy>
             <iyz>0</iyz>
-            <izz>0.0000005</izz>
+            <izz>5e-07</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
         </inertial>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/bishop.dae</uri>
@@ -3030,7 +3036,7 @@
             <lighting>1</lighting>
             <script>
               <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Red</name>
+              <name>Gazebo/Grey</name>
             </script>
             <shader type='vertex'>
               <normal_map>__default__</normal_map>
@@ -3046,12 +3052,8 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0.015 0 0 0</pose>
+          <pose frame=''>0 0 0.015 0 -0 0</pose>
           <geometry>
-            <!--mesh>
-      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/bishop.dae</uri>
-      <scale>1 1 1</scale>
-      </mesh-->
             <cylinder>
               <radius>0.01</radius>
               <length>0.03</length>
@@ -3063,6 +3065,9 @@
                 <mu>1</mu>
                 <mu2>1</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
@@ -3072,6 +3077,7 @@
                 <min_depth>0.1</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
         </collision>
       </link>
@@ -3082,21 +3088,21 @@
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>0.000001</ixx>
+            <ixx>1e-06</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>0.000001</iyy>
+            <iyy>1e-06</iyy>
             <iyz>0</iyz>
-            <izz>0.0000005</izz>
+            <izz>5e-07</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
         </inertial>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/queen.dae</uri>
@@ -3123,12 +3129,8 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0.015 0 0 0</pose>
+          <pose frame=''>0 0 0.015 0 -0 0</pose>
           <geometry>
-            <!--mesh>
-      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/queen.dae</uri>
-      <scale>1 1 1</scale>
-      </mesh-->
             <cylinder>
               <radius>0.01</radius>
               <length>0.03</length>
@@ -3140,6 +3142,9 @@
                 <mu>1</mu>
                 <mu2>1</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
@@ -3149,6 +3154,7 @@
                 <min_depth>0.1</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
         </collision>
       </link>
@@ -3159,21 +3165,21 @@
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>0.000001</ixx>
+            <ixx>1e-06</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>0.000001</iyy>
+            <iyy>1e-06</iyy>
             <iyz>0</iyz>
-            <izz>0.0000005</izz>
+            <izz>5e-07</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
         </inertial>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/king.dae</uri>
@@ -3200,12 +3206,8 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0.015 0 0 0</pose>
+          <pose frame=''>0 0 0.015 0 -0 0</pose>
           <geometry>
-            <!--mesh>
-      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/king.dae</uri>
-      <scale>1 1 1</scale>
-      </mesh-->
             <cylinder>
               <radius>0.01</radius>
               <length>0.03</length>
@@ -3217,6 +3219,9 @@
                 <mu>1</mu>
                 <mu2>1</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
@@ -3226,6 +3231,7 @@
                 <min_depth>0.1</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
         </collision>
       </link>
@@ -3236,21 +3242,21 @@
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>0.000001</ixx>
+            <ixx>1e-06</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>0.000001</iyy>
+            <iyy>1e-06</iyy>
             <iyz>0</iyz>
-            <izz>0.0000005</izz>
+            <izz>5e-07</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
         </inertial>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
@@ -3277,12 +3283,8 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0.015 0 0 0</pose>
+          <pose frame=''>0 0 0.015 0 -0 0</pose>
           <geometry>
-            <!--mesh>
-      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
-      <scale>1 1 1</scale>
-      </mesh-->
             <cylinder>
               <radius>0.01</radius>
               <length>0.03</length>
@@ -3294,6 +3296,9 @@
                 <mu>1</mu>
                 <mu2>1</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
@@ -3303,6 +3308,7 @@
                 <min_depth>0.1</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
         </collision>
       </link>
@@ -3313,21 +3319,21 @@
         <inertial>
           <mass>0.01</mass>
           <inertia>
-            <ixx>0.000001</ixx>
+            <ixx>1e-06</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>0.000001</iyy>
+            <iyy>1e-06</iyy>
             <iyz>0</iyz>
-            <izz>0.0000005</izz>
+            <izz>5e-07</izz>
           </inertia>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
         </inertial>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>1</kinematic>
         <enable_wind>0</enable_wind>
         <visual name='visual'>
-          <pose frame=''>0 0 0 0 0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
@@ -3354,12 +3360,8 @@
         <collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0.015 0 0 0</pose>
+          <pose frame=''>0 0 0.015 0 -0 0</pose>
           <geometry>
-            <!--mesh>
-      <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/pawn.dae</uri>
-      <scale>1 1 1</scale>
-      </mesh-->
             <cylinder>
               <radius>0.01</radius>
               <length>0.03</length>
@@ -3371,6 +3373,9 @@
                 <mu>1</mu>
                 <mu2>1</mu2>
               </ode>
+              <torsional>
+                <ode/>
+              </torsional>
             </friction>
             <contact>
               <ode>
@@ -3380,10 +3385,37 @@
                 <min_depth>0.1</min_depth>
               </ode>
             </contact>
+            <bounce/>
           </surface>
         </collision>
       </link>
     </model>
+    <light name='user_light_0' type='directional'>
+      <pose frame=''>0 0 5 0 0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>20</range>
+        <constant>0.5</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <cast_shadows>0</cast_shadows>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+    <light name='user_light_1' type='directional'>
+      <pose frame=''>0 0 5 0 0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>20</range>
+        <constant>0.5</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <cast_shadows>0</cast_shadows>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
     <!-- A gazebo links attacher -->
     <plugin name="ros_link_attacher_plugin" filename="libgazebo_ros_link_attacher.so"/>
   </world>
