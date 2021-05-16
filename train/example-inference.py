@@ -47,34 +47,44 @@ for file_name in sorted(files):
     result_frame = image.copy()
 
     squares = []
-    start_time = time.perf_counter()
+    #start_time = time.perf_counter()
     for i in range(0,8):
         for j in range(0,8):
             square = image[(padding_left - square_margin + i * col_width):(padding_left + square_margin + (i + 1) * col_width), (padding_top - square_margin + j * row_height):(padding_top + square_margin + (j + 1) * row_height)]
             square = cv2.resize(square, (image_size, image_size))
             square = img_to_array(square)
             square = np.array(square, dtype="float") / 255.0
-
-            prediction = np.argmax(model.predict(square[None, :, :, :], batch_size=1))
             squares.append(square)
-            label, short = helper_lib.class2label(prediction)
-            print(label, short)
+            #prediction = np.argmax(model.predict(square[None, :, :, :], batch_size=1))
+            #label, short = helper_lib.class2label(prediction)
+            #print(label, short)
 
-            cv2.putText(result_frame, label,
-                    (padding_top + j * row_height + 25, padding_left + i * col_width + 30),
-                    cv2.FONT_HERSHEY_SIMPLEX,
-                    0.5, (0, 0, 255), 2)
+            #cv2.putText(result_frame, label,
+            #        (padding_top + j * row_height + 25, padding_left + i * col_width + 30),
+            #        cv2.FONT_HERSHEY_SIMPLEX,
+            #        0.5, (0, 0, 255), 2)
 
-    print(time.perf_counter()-start_time)
-    cv2.imwrite(image_path + file_name[:-4] + "_result.jpg", result_frame)
+    #print(time.perf_counter()-start_time)
+    #cv2.imwrite(image_path + file_name[:-4] + "_result.jpg", result_frame)
 
     start_time = time.perf_counter()
     predictions = model.predict_on_batch(np.asarray(squares))
-    for i in predictions:
-        print(helper_lib.class2label(np.argmax(i)))
+    j = -1
+    for i, pred_i in enumerate(predictions):
+        if i % 8 == 0:
+            j+=1
+
+        prediction = np.argmax(pred_i)
+        label, short = helper_lib.class2label(prediction)
+        print(label, short)
+
+        cv2.putText(result_frame, label,
+                (80 + (i % 8) * row_height, 80 + j * col_width),
+                cv2.FONT_HERSHEY_SIMPLEX,
+                0.5, (0, 0, 255), 2)
 
     print(time.perf_counter()-start_time)
-    exit()
+    cv2.imwrite(image_path + file_name[:-4] + "_result.jpg", result_frame)
 
 
 
