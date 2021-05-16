@@ -46,6 +46,7 @@ for file_name in sorted(files):
 
     result_frame = image.copy()
 
+    squares = []
     start_time = time.perf_counter()
     for i in range(0,8):
         for j in range(0,8):
@@ -55,6 +56,7 @@ for file_name in sorted(files):
             square = np.array(square, dtype="float") / 255.0
 
             prediction = np.argmax(model.predict(square[None, :, :, :], batch_size=1))
+            squares.append(square)
             label, short = helper_lib.class2label(prediction)
             print(label, short)
 
@@ -66,6 +68,13 @@ for file_name in sorted(files):
     print(time.perf_counter()-start_time)
     cv2.imwrite(image_path + file_name[:-4] + "_result.jpg", result_frame)
 
+    start_time = time.perf_counter()
+    predictions = model.predict_on_batch(np.asarray(squares))
+    for i in predictions:
+        print(helper_lib.class2label(np.argmax(i)))
+
+    print(time.perf_counter()-start_time)
+    exit()
 
 
 
