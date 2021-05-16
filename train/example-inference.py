@@ -3,62 +3,69 @@
 import time
 import cv2
 import numpy as np
-import math
 import os
 
 from keras.preprocessing.image import img_to_array
 from keras.models import load_model
-#from keras.backend import set_session
-import tensorflow.compat.v1 as tf
-import os, sys, imutils, argparse
+import h5py
+from keras import __version__ as keras_version
+import os
+import helper_lib
 
-model_path = "chess-detector/"
+model_path = "model.best.h5"
 image_path = "test/"
 image_size = 100
+padding_left = 50
+padding_right = 50
+padding_top = 50
+padding_bottom = 50
+# margin has to be less or equal to padding_left or padding_top
+square_margin = 50
 
-model = load_model(model_path, compile = True)
+f = h5py.File(model_path, mode='r')
+model_version = f.attrs.get('keras_version')
+keras_version = str(keras_version).encode('utf8')
+
+if model_version != keras_version:
+    print('You are using Keras version ', keras_version,
+            ', but the model was built using ', model_version)
+
+model = load_model(model_path)
 
 files = os.listdir(image_path)
 
-
 for file_name in sorted(files):
+
     print("="*40)
     print(file_name)
     image = cv2.imread(image_path + file_name)
-    image = cv2.resize(image, (image_size, image_size))
-    image = img_to_array(image)
-    image = np.array(image, dtype="float") / 255.0
-    image = image.reshape(-1, image_size, image_size, 3)
-    
-    start_time = time.perf_counter()
-    prediction = np.argmax(model.predict(image))
-    print(time.perf_counter()-start_time)
 
-    if prediction == 0:
-        print("Empty")
-    elif prediction == 1:
-        print("Black pawn")
-    elif prediction == 2:
-        print("Black rook")
-    elif prediction == 3:
-        print("Black knight")
-    elif prediction == 4:
-        print("Black bishop")
-    elif prediction == 5:
-        print("Black king")
-    elif prediction == 6:
-        print("Black queen")
-    elif prediction == 7:
-        print("White pawn")
-    elif prediction == 8:
-        print("White rook")
-    elif prediction == 9:
-        print("White knight")
-    elif prediction == 10:
-        print("White bishop")
-    elif prediction == 11:
-        print("White king")
-    elif prediction == 12:
-        print("White queen")
+    rows,cols = image.shape[:2]
+    row_height = int((rows - padding_top - padding_bottom) / 8)
+    col_width = int((cols - padding_left - padding_right) / 8)
+
+    result_frame = image.copy()
+
+    start_time = time.perf_counter()
+    for i in range(0,8):
+        for j in range(0,8):
+            square = image[(padding_left - square_margin + i * col_width):(padding_left + square_margin + (i + 1) * col_width), (padding_top - square_margin + j * row_height):(padding_top + square_margin + (j + 1) * row_height)]
+            square = cv2.resize(square, (image_size, image_size))
+            square = img_to_array(square)
+            square = np.array(square, dtype="float") / 255.0
+
+            prediction = np.argmax(model.predict(square[None, :, :, :], batch_size=1))
+            label, short = helper_lib.class2label(prediction)
+            print(label, short)
+
+            cv2.putText(result_frame, label,
+                    (padding_top + j * row_height + 25, padding_left + i * col_width + 30),
+                    cv2.FONT_HERSHEY_SIMPLEX,
+                    0.5, (0, 0, 255), 2)
+
+    print(time.perf_counter()-start_time)
+    cv2.imwrite(image_path + file_name[:-4] + "_result.jpg", result_frame)
+
+
 
 
