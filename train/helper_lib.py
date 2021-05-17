@@ -1,3 +1,20 @@
+def get_fen(input_array):
+    fen_out = ""
+    for i, item in enumerate(input_array):
+        if i % 8 == 0 and i != 0:
+            fen_out += "/"
+        if item == "0":
+            if len(fen_out) == 0:
+                fen_out += "1"
+            elif fen_out[-1].isnumeric():
+                fen_out = fen_out[:-1] + str(int(fen_out[-1]) + 1)
+            else:
+                fen_out += "1"
+        else:
+            fen_out += item
+
+    return fen_out
+
 def label2class(label_text):
     if label_text == 'empty':
         class_num = 0
