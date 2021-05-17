@@ -1,3 +1,5 @@
 /tmp
 /train/images
 *.pyc
+*.zip
+*.h5
