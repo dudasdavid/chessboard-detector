@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python3.8
 
 import time
 import cv2
@@ -37,7 +37,11 @@ files = os.listdir(image_path)
 for file_name in sorted(files):
 
     print("="*40)
-    print(file_name)
+    print("Open file: %s" % file_name)
+    if "_result" in file_name:
+        print("Skipping...")
+        continue
+
     image = cv2.imread(image_path + file_name)
 
     rows,cols = image.shape[:2]
@@ -47,7 +51,6 @@ for file_name in sorted(files):
     result_frame = image.copy()
 
     squares = []
-    #start_time = time.perf_counter()
     for i in range(0,8):
         for j in range(0,8):
             square = image[(padding_left - square_margin + i * col_width):(padding_left + square_margin + (i + 1) * col_width), (padding_top - square_margin + j * row_height):(padding_top + square_margin + (j + 1) * row_height)]
@@ -55,36 +58,33 @@ for file_name in sorted(files):
             square = img_to_array(square)
             square = np.array(square, dtype="float") / 255.0
             squares.append(square)
-            #prediction = np.argmax(model.predict(square[None, :, :, :], batch_size=1))
-            #label, short = helper_lib.class2label(prediction)
-            #print(label, short)
 
-            #cv2.putText(result_frame, label,
-            #        (padding_top + j * row_height + 25, padding_left + i * col_width + 30),
-            #        cv2.FONT_HERSHEY_SIMPLEX,
-            #        0.5, (0, 0, 255), 2)
-
-    #print(time.perf_counter()-start_time)
-    #cv2.imwrite(image_path + file_name[:-4] + "_result.jpg", result_frame)
 
     start_time = time.perf_counter()
     predictions = model.predict_on_batch(np.asarray(squares))
     j = -1
+    fen_input = []
     for i, pred_i in enumerate(predictions):
         if i % 8 == 0:
             j+=1
 
         prediction = np.argmax(pred_i)
         label, short = helper_lib.class2label(prediction)
-        print(label, short)
+        #print(label, short)
+        fen_input.append(short)
 
         cv2.putText(result_frame, label,
                 (80 + (i % 8) * row_height, 80 + j * col_width),
                 cv2.FONT_HERSHEY_SIMPLEX,
                 0.5, (0, 0, 255), 2)
 
-    print(time.perf_counter()-start_time)
-    cv2.imwrite(image_path + file_name[:-4] + "_result.jpg", result_frame)
+    print("Batch inference time: %.3f" % (time.perf_counter()-start_time))
+    #print(fen_input)
+    fen = helper_lib.get_fen(fen_input)
+    print("Fen: %s" % fen)
+    result_name = file_name[:-4] + "_result.jpg"
+    print("Result saved to %s" % result_name)
+    cv2.imwrite(image_path + result_name, result_frame)
 
 
 
