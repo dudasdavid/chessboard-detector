@@ -1,11 +1,11 @@
 # import the necessary packages
-from keras.models import Sequential
-from keras.models import load_model
+from keras.models import Sequential, load_model
 from keras.layers import Activation, Flatten, Dense, Dropout, Conv2D, MaxPooling2D, Lambda
 from keras.callbacks import ReduceLROnPlateau, ModelCheckpoint
 from keras.preprocessing.image import img_to_array
 from keras.optimizers import Adam
 from keras.losses import SparseCategoricalCrossentropy
+from keras.metrics import CategoricalAccuracy
 from sklearn.model_selection import train_test_split
 import sklearn
 from imutils import paths
@@ -17,6 +17,14 @@ import matplotlib.pyplot as plt
 from argparse import ArgumentParser
 import math
 import helper_lib
+
+from numpy.random import seed
+from tensorflow.random import set_seed
+
+# Fix every random seed to make the training reproducible
+seed(1)
+set_seed(2)
+random.seed(42)
 
 image_size = 100
 
@@ -73,7 +81,6 @@ labels = []
  
 # grab the image paths and randomly shuffle them
 samples = sorted(list(paths.list_images(dataset)))
-random.seed(42)
 random.shuffle(samples)
 
 # split training and validation samples
@@ -99,6 +106,7 @@ def generator(samples, batch_size=32):
                 label = batch_sample.split(os.path.sep)[-2]
                 #print(label)
                 label = helper_lib.label2class(label)
+                #print(label)
                 labels.append(label)
 
                 """
@@ -121,7 +129,7 @@ train_generator = generator(train_samples, batch_size=batch_size)
 validation_generator = generator(validation_samples, batch_size=batch_size)
 
 # hyperparameters
-EPOCHS  = 10
+EPOCHS  = 12
 INIT_LR = 0.01
 DECAY   = INIT_LR / EPOCHS
 
@@ -130,7 +138,7 @@ if not args.is_continue:
     model = build_model(width=image_size, height=image_size, depth=3, classes=13)
 
     opt = Adam(lr=INIT_LR, decay=DECAY)
-    model.compile(optimizer=opt, loss=SparseCategoricalCrossentropy(from_logits=True), metrics=["accuracy"])
+    model.compile(optimizer=opt, loss=SparseCategoricalCrossentropy(from_logits=True), metrics=["accuracy"])#, CategoricalAccuracy()])
 # continue the training of exisiting model
 else:
     model = load_model(args.input)
@@ -166,6 +174,8 @@ plt.plot(history.history['loss'], label="loss")
 plt.plot(history.history['val_loss'], label="val_loss")
 plt.plot(history.history['accuracy'], label="accuracy")
 plt.plot(history.history['val_accuracy'], label="val_accuracy")
+#plt.plot(history.history['categorical_accuracy'], label="categorical_accuracy")
+#plt.plot(history.history['val_categorical_accuracy'], label="val_categorical_accuracy")
 plt.legend()
 plt.savefig('model_training')
 plt.close()
