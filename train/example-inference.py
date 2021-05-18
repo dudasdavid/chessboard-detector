@@ -11,8 +11,20 @@ import h5py
 from keras import __version__ as keras_version
 import os
 import helper_lib
+from argparse import ArgumentParser
 
-model_path = "model.best.h5"
+def build_argparser():
+    # parse command line arguments.
+    parser = ArgumentParser()
+    parser.add_argument("-i", "--input", required=False, type=str, default="model.best.h5",
+                        help="Path to model")         
+
+    return parser
+
+# grab command line args
+args = build_argparser().parse_args()
+
+model_path = args.input
 image_path = "test/"
 image_size = 100
 padding_left = 50
