@@ -1,9 +1,9 @@
 # import the necessary packages
 from keras.models import Sequential, load_model
-from keras.layers import Activation, Flatten, Dense, Dropout, Conv2D, MaxPooling2D, Lambda
+from keras.layers import Activation, Flatten, Dense, Dropout, Conv2D, MaxPooling2D, Lambda, BatchNormalization
 from keras.callbacks import ReduceLROnPlateau, ModelCheckpoint
 from keras.preprocessing.image import img_to_array
-from keras.optimizers import Adam
+from keras.optimizers import Adam, SGD
 from keras.losses import SparseCategoricalCrossentropy
 from keras.metrics import CategoricalAccuracy
 from sklearn.model_selection import train_test_split
@@ -64,14 +64,14 @@ def build_model(width, height, depth, classes):
     model.add(Dropout(0.2))
     model.add(Dense(500))
     model.add(Activation("relu"))
-    
+
     # softmax classifier
     model.add(Dense(classes))
     model.add(Activation("softmax"))
     
     # return the constructed network architecture
     return model
-    
+   
 # grab command line args
 args = build_argparser().parse_args()
 
@@ -143,7 +143,7 @@ DECAY   = INIT_LR / EPOCHS
 if not args.is_continue:
     model = build_model(width=image_size, height=image_size, depth=3, classes=13)
 
-    opt = Adam(lr=INIT_LR, decay=DECAY)
+    opt = SGD(lr=INIT_LR, decay=DECAY)
     model.compile(optimizer=opt, loss=SparseCategoricalCrossentropy(from_logits=True), metrics=["accuracy"])#, CategoricalAccuracy()])
 # continue the training of exisiting model
 else:
@@ -190,5 +190,9 @@ plt.plot(history.history['val_accuracy'], label="val_accuracy")
 #plt.plot(history.history['categorical_accuracy'], label="categorical_accuracy")
 #plt.plot(history.history['val_categorical_accuracy'], label="val_categorical_accuracy")
 plt.legend()
-plt.savefig('model_training')
+if not args.use_sim:
+    plt.savefig('model_training')
+else:
+    plt.savefig('model_training_sim')
+
 plt.close()
