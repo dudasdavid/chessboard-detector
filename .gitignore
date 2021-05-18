@@ -1,5 +1,6 @@
 /tmp
 /train/images
+/train/images_sim
 *.pyc
 *.zip
 *.h5
