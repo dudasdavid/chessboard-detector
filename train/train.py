@@ -35,6 +35,8 @@ def build_argparser():
                         help="Path to model")
     parser.add_argument("-c", "--is_continue", type=bool, default=False,
                         help="Continue training")
+    parser.add_argument("-s", "--use_sim", type=bool, default=False,
+                        help="Use simulation folder")            
 
     return parser
 
@@ -73,7 +75,11 @@ def build_model(width, height, depth, classes):
 # grab command line args
 args = build_argparser().parse_args()
 
-dataset = './images'
+if not args.use_sim:
+    dataset = './images'
+else:
+    dataset = './images_sim'
+
 # initialize the data and labels
 print("[INFO] loading images...")
 data = []
@@ -154,7 +160,11 @@ reduce_lr = ReduceLROnPlateau(monitor='val_loss',
                                 min_lr=1e-6)
 
 # checkpoint the best model
-filepath = "model.best.h5"
+if not args.use_sim:
+    filepath = "model.best.h5"
+else:
+    filepath = "model_sim.best.h5"
+
 checkpoint = ModelCheckpoint(filepath, monitor = 'val_loss',verbose=1,
                              save_best_only=True,mode='min')
 
@@ -165,7 +175,10 @@ callbacks_list=[reduce_lr, checkpoint]
 history = model.fit(train_generator, steps_per_epoch=math.ceil(len(train_samples)/batch_size), epochs=EPOCHS, validation_data=validation_generator, validation_steps=math.ceil(len(validation_samples)/batch_size), callbacks=callbacks_list, verbose=1)
 
 # save the model
-model.save("model.h5")
+if not args.use_sim:
+    model.save("model.h5")
+else:
+    model.save("model_sim.h5")
 
 # plot and save training history
 plt.xlabel('Epoch Number')
