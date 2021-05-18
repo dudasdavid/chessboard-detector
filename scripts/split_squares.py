@@ -32,7 +32,8 @@ def split_images(msg):
         # Convert your ROS Image message to OpenCV2
         cv2Img = bridge.imgmsg_to_cv2(msg, desired_encoding="bgr8")
         if time.time() > last_save_time + save_delay:
-            cv2.imwrite(path + "board-" + datetime.today().strftime('%Y%m%d-%H%M%S-%f') + ".jpg", cv2Img)
+            time_postfix = datetime.today().strftime('%Y%m%d-%H%M%S-%f')
+            cv2.imwrite(path + "board-" + time_postfix + ".jpg", cv2Img)
 
         rows,cols = cv2Img.shape[:2]
         row_height = int((rows - padding_top - padding_bottom) / 8)
@@ -42,7 +43,7 @@ def split_images(msg):
             for j in range(0,8):
                 square = cv2Img[(padding_left - square_margin + i * col_width):(padding_left + square_margin + (i + 1) * col_width), (padding_top - square_margin + j * row_height):(padding_top + square_margin + (j + 1) * row_height)]
                 if time.time() > last_save_time + save_delay:
-                    cv2.imwrite(path + "square-" + str(i) + "-" + str(j) + "-" + datetime.today().strftime('%Y%m%d-%H%M%S-%f') + ".jpg", square)
+                    cv2.imwrite(path + "square-" + str(i) + "-" + str(j) + "-" + time_postfix + ".jpg", square)
 
         if time.time() > last_save_time + save_delay:
             print("Images were saved!")
