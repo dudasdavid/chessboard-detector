@@ -15,19 +15,38 @@ except ImportError:
     from Queue import Queue
 
 import threading
+from keras.preprocessing.image import img_to_array
+from keras.models import load_model
+import h5py
+from keras import __version__ as keras_version
+import numpy as np
+import helper_lib
+import os
 
-#path = "/home/david/Pictures/saves/"
+
 padding_left = 50
 padding_right = 50
 padding_top = 50
 padding_bottom = 50
 # margin has to be less or equal to padding_left or padding_top
 square_margin = 50
+image_size = 100
 
 rospack = rospkg.RosPack()
 
 path = rospack.get_path('chess_detector')
-path = path + "/tmp/"
+save_path = path + "/tmp/"
+
+model_path = path + "/train/model.best.h5"
+f = h5py.File(model_path, mode='r')
+model_version = f.attrs.get('keras_version')
+keras_version = str(keras_version).encode('utf8')
+
+if model_version != keras_version:
+    print('You are using Keras version ', keras_version,
+            ', but the model was built using ', model_version)
+
+model = load_model(model_path)
 
 class BufferQueue(Queue):
     """Slight modification of the standard Queue that discards the oldest item
@@ -56,13 +75,14 @@ class cvThread(threading.Thread):
         self.image_queue = image_queue
         self.image = None
         self.save_delay = 5.0
-        #self.save_delay = float("inf")
+        self.save_delay = float("inf")
         self.last_save_time = 0
+        self.save_this = False
 
     def run(self):
         # Create a single OpenCV window
-        cv2.namedWindow("frame", cv2.WINDOW_NORMAL)
-        cv2.resizeWindow("frame", 800,600)
+        cv2.namedWindow("marked_image", cv2.WINDOW_NORMAL)
+        cv2.resizeWindow("marked_image", 1200,1200)
 
         while True:
             self.image = self.image_queue.get()
@@ -76,26 +96,66 @@ class cvThread(threading.Thread):
                 rospy.signal_shutdown('Quit')
 
     def split_image(self, img):
+        result_frame = img.copy()
         # save
         if time.time() > self.last_save_time + self.save_delay:
+            self.save_this = True
             time_postfix = datetime.today().strftime('%Y%m%d-%H%M%S-%f')
-            cv2.imwrite(path + "board-" + time_postfix + ".jpg", img)
+            cv2.imwrite(save_path + "board-" + time_postfix + ".jpg", img)
+            square_path = save_path + "/" + time_postfix
+            os.mkdir(square_path)
 
         rows,cols = img.shape[:2]
         row_height = int((rows - padding_top - padding_bottom) / 8)
         col_width = int((cols - padding_left - padding_right) / 8)
 
+        squares = []
         for i in range(0,8):
             for j in range(0,8):
                 square = img[(padding_left - square_margin + i * col_width):(padding_left + square_margin + (i + 1) * col_width), (padding_top - square_margin + j * row_height):(padding_top + square_margin + (j + 1) * row_height)]
-                if time.time() > self.last_save_time + self.save_delay:
-                    cv2.imwrite(path + "square-" + str(i) + "-" + str(j) + "-" + time_postfix + ".jpg", square)
+                if self.save_this:
+                    cv2.imwrite(square_path + "/square-" + str(i) + "-" + str(j) + "-" + time_postfix + ".jpg", square)
+                square = cv2.resize(square, (image_size, image_size))
+                square = img_to_array(square)
+                square = np.array(square, dtype="float") / 255.0
+                squares.append(square)
 
-        if time.time() > self.last_save_time + self.save_delay:
+        start_time = time.perf_counter()
+        predictions = model.predict_on_batch(np.asarray(squares))
+        j = -1
+        fen_input = []
+        for i, pred_i in enumerate(predictions):
+            if i % 8 == 0:
+                j+=1
+
+            prediction = np.argmax(pred_i)
+            label, short = helper_lib.class2label(prediction)
+            #print(label, short)
+            fen_input.append(short)
+
+            cv2.putText(result_frame, label,
+                    (60 + (i % 8) * col_width, 80 + j * row_height),
+                    cv2.FONT_HERSHEY_SIMPLEX,
+                    0.6, (0, 0, 255), 2)
+
+        print("Batch inference time: %.3f" % (time.perf_counter()-start_time))
+        #print(fen_input)
+        fen = helper_lib.get_fen(fen_input)
+        print("Fen: %s" % fen)
+
+        cv2.putText(result_frame, fen,
+                    (50, rows - 10),
+                    cv2.FONT_HERSHEY_SIMPLEX,
+                    1, (0, 0, 255), 3)
+
+
+        if self.save_this:
+            cv2.imwrite(save_path + "result-" + time_postfix + ".jpg", result_frame)
             print("Images were saved!")
             self.last_save_time = time.time()
+            self.save_this = False
 
-        return img
+        return result_frame
 
 
 def split_depth(msg):
