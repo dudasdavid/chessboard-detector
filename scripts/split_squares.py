@@ -9,6 +9,13 @@ import rospkg
 import time
 from datetime import datetime
 
+try:
+    from queue import Queue
+except ImportError:
+    from Queue import Queue
+
+import threading
+
 #path = "/home/david/Pictures/saves/"
 padding_left = 50
 padding_right = 50
@@ -22,36 +29,74 @@ rospack = rospkg.RosPack()
 path = rospack.get_path('chess_detector')
 path = path + "/tmp/"
 
-save_delay = 5.0
-save_delay = float("inf")
-last_save_time = 0
+class BufferQueue(Queue):
+    """Slight modification of the standard Queue that discards the oldest item
+    when adding an item and the queue is full.
+    """
+    def put(self, item, *args, **kwargs):
+        # The base implementation, for reference:
+        # https://github.com/python/cpython/blob/2.7/Lib/Queue.py#L107
+        # https://github.com/python/cpython/blob/3.8/Lib/queue.py#L121
+        with self.mutex:
+            if self.maxsize > 0 and self._qsize() == self.maxsize:
+                self._get()
+            self._put(item)
+            self.unfinished_tasks += 1
+            self.not_empty.notify()
 
-def split_images(msg):
-    global last_save_time
-    try:
-        # Convert your ROS Image message to OpenCV2
-        cv2Img = bridge.imgmsg_to_cv2(msg, desired_encoding="bgr8")
-        if time.time() > last_save_time + save_delay:
+class cvThread(threading.Thread):
+    """
+    Thread that displays and processes the current image
+    It is its own thread so that all display can be done
+    in one thread to overcome imshow limitations and
+    https://github.com/ros-perception/image_pipeline/issues/85
+    """
+    def __init__(self, image_queue):
+        threading.Thread.__init__(self)
+        self.image_queue = image_queue
+        self.image = None
+        self.save_delay = 5.0
+        #self.save_delay = float("inf")
+        self.last_save_time = 0
+
+    def run(self):
+        # Create a single OpenCV window
+        cv2.namedWindow("frame", cv2.WINDOW_NORMAL)
+        cv2.resizeWindow("frame", 800,600)
+
+        while True:
+            self.image = self.image_queue.get()
+
+            marked_image = self.split_image(self.image)
+            cv2.imshow("marked_image", marked_image)
+
+            # Check for 'q' key to exit
+            k = cv2.waitKey(6) & 0xFF
+            if k in [27, ord('q')]:
+                rospy.signal_shutdown('Quit')
+
+    def split_image(self, img):
+        # save
+        if time.time() > self.last_save_time + self.save_delay:
             time_postfix = datetime.today().strftime('%Y%m%d-%H%M%S-%f')
-            cv2.imwrite(path + "board-" + time_postfix + ".jpg", cv2Img)
+            cv2.imwrite(path + "board-" + time_postfix + ".jpg", img)
 
-        rows,cols = cv2Img.shape[:2]
+        rows,cols = img.shape[:2]
         row_height = int((rows - padding_top - padding_bottom) / 8)
         col_width = int((cols - padding_left - padding_right) / 8)
 
         for i in range(0,8):
             for j in range(0,8):
-                square = cv2Img[(padding_left - square_margin + i * col_width):(padding_left + square_margin + (i + 1) * col_width), (padding_top - square_margin + j * row_height):(padding_top + square_margin + (j + 1) * row_height)]
-                if time.time() > last_save_time + save_delay:
+                square = img[(padding_left - square_margin + i * col_width):(padding_left + square_margin + (i + 1) * col_width), (padding_top - square_margin + j * row_height):(padding_top + square_margin + (j + 1) * row_height)]
+                if time.time() > self.last_save_time + self.save_delay:
                     cv2.imwrite(path + "square-" + str(i) + "-" + str(j) + "-" + time_postfix + ".jpg", square)
 
-        if time.time() > last_save_time + save_delay:
+        if time.time() > self.last_save_time + self.save_delay:
             print("Images were saved!")
-            last_save_time = time.time()
+            self.last_save_time = time.time()
 
+        return img
 
-    except CvBridgeError as e:
-        print(e)
 
 def split_depth(msg):
     try:
@@ -60,19 +105,35 @@ def split_depth(msg):
     except CvBridgeError as e:
         print(e)
 
+
+def queueMonocular(msg):
+    try:
+        # Convert your ROS Image message to OpenCV2
+        cv2Img = bridge.imgmsg_to_cv2(msg, desired_encoding="bgr8")
+    except CvBridgeError as e:
+        print(e)
+    else:
+        qMono.put(cv2Img)
+
 print("Python version: %s" % sys.version)
 print("OpenCV version: %s" % cv2.__version__)
 
+queueSize = 1   
+qMono = BufferQueue(queueSize)
+
+cvThreadHandle = cvThread(qMono)
+cvThreadHandle.setDaemon(True)
+cvThreadHandle.start()
+
 bridge = CvBridge()
 
-rospy.init_node('aruco_detector')
+rospy.init_node('detect_pieces')
 # Define your image topic
 image_topic = "/chessboard_image/color/image_raw"
-depth_topic = "/chessboard_image/depth/image_raw"
+#depth_topic = "/chessboard_image/depth/image_raw"
 
-rospy.Subscriber(image_topic, Image, split_images)
-rospy.Subscriber(depth_topic, Image, split_depth)
-
+rospy.Subscriber(image_topic, Image, queueMonocular)
+#rospy.Subscriber(depth_topic, Image, split_depth)
 
 # Spin until Ctrl+C
 rospy.spin()
