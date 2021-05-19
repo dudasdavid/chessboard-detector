@@ -7,7 +7,8 @@
     <param name="pixel_format" value="yuyv" />
     <param name="io_method" value="mmap"/>
     <param name="autofocus" value="false"/>
-    <param name="focus" value="10"/>
+    <param name="focus" value="7"/>
+    <param name="brightness" value="125"/>
     <param name="camera_name" value="chessboard"/>
     <param name="camera_frame_id" value="chessboard"/>
 
