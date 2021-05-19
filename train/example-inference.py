@@ -5,10 +5,10 @@ import cv2
 import numpy as np
 import os
 
-from keras.preprocessing.image import img_to_array
-from keras.models import load_model
+from tensorflow.keras.preprocessing.image import img_to_array
+from tensorflow.keras.models import load_model
 import h5py
-from keras import __version__ as keras_version
+from tensorflow.keras import __version__ as keras_version
 import os
 import helper_lib
 from argparse import ArgumentParser

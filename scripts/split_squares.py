@@ -15,10 +15,10 @@ except ImportError:
     from Queue import Queue
 
 import threading
-from keras.preprocessing.image import img_to_array
-from keras.models import load_model
+from tensorflow.keras.preprocessing.image import img_to_array
+from tensorflow.keras.models import load_model
 import h5py
-from keras import __version__ as keras_version
+from tensorflow.keras import __version__ as keras_version
 import numpy as np
 import helper_lib
 import os
@@ -102,7 +102,7 @@ class cvThread(threading.Thread):
             self.save_this = True
             time_postfix = datetime.today().strftime('%Y%m%d-%H%M%S-%f')
             cv2.imwrite(save_path + "board-" + time_postfix + ".jpg", img)
-            square_path = save_path + "/" + time_postfix
+            square_path = save_path + time_postfix
             os.mkdir(square_path)
 
         rows,cols = img.shape[:2]
