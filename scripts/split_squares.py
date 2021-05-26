@@ -15,6 +15,7 @@ except ImportError:
     from Queue import Queue
 
 import threading
+import tensorflow as tf
 from tensorflow.keras.preprocessing.image import img_to_array
 from tensorflow.keras.models import load_model
 import h5py
@@ -23,6 +24,18 @@ import numpy as np
 import helper_lib
 import os
 
+#os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
+#if tf.test.gpu_device_name():
+#    print('GPU found')
+#else:
+#    print("No GPU found")
+
+from tensorflow.compat.v1 import ConfigProto
+from tensorflow.compat.v1 import InteractiveSession
+
+config = ConfigProto()
+config.gpu_options.allow_growth = True
+session = InteractiveSession(config=config)
 
 padding_left = 50
 padding_right = 50

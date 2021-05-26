@@ -13,6 +13,13 @@ import os
 import helper_lib
 from argparse import ArgumentParser
 
+from tensorflow.compat.v1 import ConfigProto
+from tensorflow.compat.v1 import InteractiveSession
+
+config = ConfigProto()
+config.gpu_options.allow_growth = True
+session = InteractiveSession(config=config)
+
 def build_argparser():
     # parse command line arguments.
     parser = ArgumentParser()
