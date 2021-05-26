@@ -481,10 +481,10 @@
       <wall_time>1620766106 16586800</wall_time>
       <iterations>54499</iterations>
       <model name='chessboard'>
-        <pose frame=''>0 0.32 1.115 0 -0 1.5708</pose>
+        <pose frame=''>0 0.32 1.095 0 -0 1.5708</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>0 0.32 1.115 0 -0 1.5708</pose>
+          <pose frame=''>0 0.32 1.095 0 -0 1.5708</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
