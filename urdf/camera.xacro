@@ -54,7 +54,7 @@
   <!-- Camera simulation -->
   <gazebo reference="camera_link">
     <sensor type="camera" name="camera1">
-      <update_rate>30.0</update_rate>
+      <update_rate>10.0</update_rate>
       <visualize>true</visualize>
       <camera name="head">
         <horizontal_fov>1.1</horizontal_fov>
