@@ -8,7 +8,7 @@ roslaunch chess_detector split_squares.launch
 
 Bringup in Gazebo
 
-export GAZEBO_MODEL_PATH=GAZEBO_MODEL_PATH:~/bme_catkin_ws/src/chessboard-detector/gazebo_models/
+export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:~/catkin_ws/src/chessboard-detector/gazebo_models/
 
 roslaunch ur_e_gazebo ur3e.launch limited:=true world_file:='$(find chess_detector)/world/chessboard.world' z:=1.02
 roslaunch ur3_e_moveit_config ur3_e_moveit_planning_execution.launch sim:=true limited:=true
