@@ -24,7 +24,7 @@
         <pose frame=''>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/chessboard.dae</uri>
+            <uri>model://chessboard/meshes/chessboard.dae</uri>
             <scale>1 1 1</scale>
           </mesh>
         </geometry>
@@ -36,10 +36,6 @@
         <max_contacts>10</max_contacts>
         <pose frame=''>0 0 0.005 0 0 0</pose>
         <geometry>
-          <!--mesh>
-            <uri>/home/david/bme_catkin_ws/src/chessboard-detector/meshes/chessboard.dae</uri>
-            <scale>1 1 1</scale>
-          </mesh-->
           <box>
             <size>0.368 0.368 0.01</size>
           </box>
